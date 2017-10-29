@@ -1,0 +1,111 @@
+nav-bar-height = 100px
+nav-bar-color = #000
+
+.flip
+  transform: rotate3d(1, 0, 0, -90deg)
+
+.nav-bar-wrapper
+  perspective: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 11
+  @media all and (max-width: 700px)
+    position: relative
+    transform: translate3d(0, 0, 0)
+.nav-bar
+  background: nav-bar-color
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  transform-origin: top
+  transition: transform 0.5s ease
+  -webkit-font-smoothing: antialiased
+  padding: 0 24px
+  box-sizing: border-box
+  height: 130px
+  overflow: hidden
+  @media all and (max-width: 700px)
+    height: auto
+    display: block
+  .free-pass-button
+    margin: 20px 0
+    padding: 0
+    .free-pass
+      font-size: 16pt
+      font-family: 'Roboto', sans-serif;
+      padding: 15px 15px
+      @media all and (max-width: 1200px)
+        font-size: 9pt
+        padding: 18px 23px
+  h1
+    padding: 0px 15px
+  .logo
+    width: 50px
+    height: 50px
+    background: grey
+  .nav-bar-header
+    display: flex
+    flex-direction: row
+    padding: 0
+    align-items: center
+    justify-content: flex-start
+    background: white
+    @media all and (max-width: 700px)
+        padding-top: 20px
+    .icon
+      max-width: 100px
+      min-width: 75px
+      @media all and (max-width: 700px)
+        width: 20%
+        max-width: 20%
+        min-width: 20%
+    .title
+      max-width: 400px
+      min-width: 300px
+      @media all and (max-width: 700px)
+        width: 80%
+        max-width: 80%
+        min-width: 80%
+  ul
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    height: nav-bar-height
+
+    .nav-link:hover > .nav-item-above
+        transform: rotate3d(1 0 0 0)
+
+    .nav-link > .nav-item-above
+      @include transition(all 0.25s ease-in-out)
+      transform: rotate3d(1 0 0 -90deg)
+      transform-origin: center top 8px
+      height: 0vh
+
+    .nav-link:hover > .nav-item
+        transform: rotate3d(1 0 0 90deg)
+
+    .nav-link > .nav-item
+      @include transition(all  0.25s ease-in-out)
+      transform: rotate3d(1 0 0 0)
+      transform-origin: center bottom 8px
+
+    .nav-link
+      text-decoration: none
+      color: #635656
+      font-weight: 100
+      z-index: 9
+
+    li
+      list-style-type: none
+      padding: 0px 10px
+
+    .selected-page
+      color: #dea1a1

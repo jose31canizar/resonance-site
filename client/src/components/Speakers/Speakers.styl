@@ -1,0 +1,50 @@
+.speakers-container
+  background: #fefafa
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  h2
+    width: 50%
+    padding: 100px 0
+    @media all and (max-width: 700px)
+      width: 85%
+      font-size: 1.5em
+      padding: 50px 0
+      padding-bottom: 50px
+  .speakers
+    padding-top: 80px
+    padding-bottom: 40px
+    width: 100%
+    background: white
+    display: grid
+    grid-template-columns: repeat(3, 3fr)
+    @media all and (max-width: 1200px)
+      grid-template-columns: repeat(2, 2fr)
+    @media all and (max-width: 700px)
+      grid-row-gap: 65px
+      grid-template-columns: 100%
+    grid-row-gap: 100px
+    justify-items: center
+    h3
+      font-size: 1.3em
+      font-weight: 100
+      text-align: center
+      padding-top: 20px
+    p
+      font-family: 'Helvetica'
+      padding-top: 10px
+      font-size: 1.2em
+      line-height: 1.2em
+      @media all and (max-width: 1200px)
+        text-align: center
+        font-size: 1em
+    .speaker
+      width: 60%
+      @media all and (max-width: 700px)
+        width: 100%
+        padding: 0 60px
+        box-sizing: border-box
+        margin-bottom: 40px
+      img
+        width: 100%

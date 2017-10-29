@@ -1,0 +1,23 @@
+left-translate = 5vw
+right-translate = 75vw
+
+@mixin unreveal($t)
+  -webkit-animation: unreveal $t /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: unreveal $t /* Firefox < 16 */
+  -ms-animation: unreveal $t /* Internet Explorer */
+  -o-animation: unreveal $t /* Opera < 12.1 */
+  animation: unreveal $t
+
+@keyframes unreveal
+  0%
+    transform-origin: center left
+    transform: translateX(left-translate) scaleY(4) scaleX(4)
+    font-size: 0em
+  60%
+    transform-origin: origin
+    transform: translateX(right-translate) scaleY(4) scaleX(1)
+    font-size: 0em
+  100%
+    transform-origin: origin
+    transform: translateX(right-translate) scaleY(1) scaleX(1)
+    font-size: 1em

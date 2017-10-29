@@ -1,0 +1,87 @@
+.email-opt-in
+  width: 100%
+  height: 100vh
+  position: fixed
+  top: 0
+  z-index: 12
+  background: rgba(82, 72, 72, 0.5)
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-direction: column
+  .registration-block
+    animation: slidein 1s
+    background: white
+    width: 75%
+    padding: 100px 50px
+    padding-top: 70px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    border-radius: 8px
+    @media all and (max-width: 700px)
+      width: 100%
+      padding: 20px 0
+      border-radius: 0
+    h2
+      padding-bottom: 50px
+      text-align: center
+      cursor: default
+      @media all and (max-width: 700px)
+        padding: 0
+        padding-bottom: 10px
+        font-size: 1.4em
+        width: 75%
+    h4
+      text-align: center
+      color: #6A5B68
+      padding-bottom: 25px
+      cursor: default
+      @media all and (max-width: 700px)
+        padding: 0 10px
+        font-size: 1em
+        width: 60%
+    form
+      width: 90%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      input
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        width: 100%
+        border: 0.5px solid #c3b2b2
+        border-radius: 1px
+        padding: 1em 15px
+        font-size: 1.5em
+        font-family: 'Gotham', Futura, sans-serif
+        box-sizing: border-box
+        outline: none
+        margin-top: 20px
+        background: #f9f9f9
+        @media all and (max-width: 700px)
+          margin-top: 10px
+          padding: 15px 5px
+          font-size: 1em
+      input[type=submit]
+        user-select: none
+        cursor: pointer
+        border: none
+        background: #DDC459
+        color: white
+        transition: opacity 0.3s, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        /*box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16)*/
+        padding: 20px 0
+        box-sizing: border-box
+        -webkit-appearance: none
+        text-align: center
+        @media all and (max-width: 700px)
+          white-space: pre-line
+          font-size: 1em
+      input[type=submit]:hover
+        background: #FFE267
+        color: #FFFFFF

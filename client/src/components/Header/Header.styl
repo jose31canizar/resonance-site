@@ -1,0 +1,83 @@
+.header
+  width: 100%
+  background: #ffffff
+  padding: 50px
+  padding-top: 120px
+  box-sizing: border-box
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  @media all and (max-width: 1500px)
+    padding: 0
+    padding-top: 120px
+  @media all and (max-width: 700px)
+    padding-top: 200px
+  img
+    width: 40%
+    object-fit: contain
+  .headline
+    display: flex
+    justify-content: center
+    align-items: center
+    h2
+      padding-top: 70px
+      padding-bottom: 40px
+      width: 100%
+      @media all and (max-width: 700px)
+        padding-top: 50px
+        width: 90%
+        white-space: pre-wrap
+  .header-content
+    display: flex
+    justify-content: center
+    width: 100%
+    @media all and (max-width: 1200px)
+      justify-content: center
+      flex-direction: column
+      width: 80%
+    .video
+      width: 45%
+      height: auto
+      background: white
+    .description
+      width: 40%
+      @media all and (max-width: 1200px)
+        padding-top: 50px
+        width: 100%
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+    .ticket
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      @media all and (max-width: 1200px)
+        width: 75%
+      @media all and (max-width: 700px)
+        width: 100%
+      p
+        margin-left: 25px
+        span
+          color: #DDC459
+          font-size: 1em
+        @media all and (max-width: 1200px)
+          width: 50%
+    p
+      line-height: 1.3em
+      margin-right: 60px
+      margin-bottom: 20px
+      @media all and (max-width: 1200px)
+        width: 50%
+        margin-right: 0
+      @media all and (max-width: 700px)
+        font-size: 1.1em
+        width: 90%
+        margin-right: 0
+  .wistia_responsive_padding
+    width: 55%
+    @media all and (max-width: 1024px)
+      width: 100% !important
+      margin-left: 0 !important

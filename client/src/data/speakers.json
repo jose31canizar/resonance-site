@@ -1,0 +1,88 @@
+[
+  {
+    "speakers": [
+    {
+        "image":"speaker-christy-harrison",
+        "name":"CHRISTY HARRISON, RD",
+        "description":"Host of Food Psych podcast and Teacher of Intuitive Eating Fundamentals"
+      },
+    {
+        "image":"speaker-evelyn-tribole",
+        "name":"EVELYN TRIBOLE, RD",
+        "description":"Best-Selling Author of Intuitive Eating: A Revolutionary Program that Works"
+      },
+      {
+          "image":"speaker-anita-johnston",
+          "name":"DR. ANITA JOHNSTON",
+          "description":"World–Renowned Storyteller and Best-Selling Author of Eating in the Light of the Moon"
+        },
+      {
+        "image":"speaker-shannon-kopp",
+        "name":"SHANNON KOPP",
+        "description":"Best-Selling Author of Pound for Pound and Founder of Soul Paws"
+      },
+      {
+        "image":"speaker-rebecca-scritchfield",
+        "name":"REBECCA SCRITCHFIELD, RD",
+        "description":"Author of Body Kindness and Host of the Body Kindness Podcast"
+      },
+      {
+          "image":"speaker-isabel-foxen-duke",
+          "name":"ISABEL FOXEN DUKE",
+          "description":"Creator of the Stop Fighting Food program and body positive activist"
+        },
+      {
+        "image":"speaker-angela-gulner",
+        "name":"ANGELA GULNER",
+        "description":"Writer and Actress of BINGE: The Series and Host of the Clambake"
+      },
+      {
+        "image":"speaker-eliza-kingsford",
+        "name":"ELIZA KINGSFORD, LPC",
+        "description":"Obesity expert and Author of Brain Powered Weight Loss"
+      },
+      {
+        "image":"speaker-mary-anne-cohen",
+        "name":"MARY ANNE COHEN, LMFT",
+        "description":"Founder of EmotionalEating.org and Author of Declaring Peace with Emotional Eating Series"
+      },
+      {
+        "image":"speaker-leora-fulvio",
+        "name":"LEORA FULVIO, LMFT",
+        "description":"Creator of the 5 Week Step-by-Step Program to Stop Binge Eating For Good"
+      },
+      {
+        "image":"speaker-anne-ortelee",
+        "name":"ANNE ORTELEE",
+        "description":"Internationally (ISAR) certified astrologer and Host of The Weekly Weather"
+      },
+      {
+        "image":"speaker-julie-norman",
+        "name":"JULIE NORMAN, E-RYT",
+        "description":"Creator of signature yoga-based program, Body Karma Healing"
+      },
+      {
+        "image":"speaker-colleen-reichman",
+        "name":"Dr. COLLEEN REICHMANN",
+        "description":"Creator of Food and Feelings: How To Survive and Thrive in a Diet-Driven World"
+      },
+      {
+        "image":"speaker-brandilyn-tebo",
+        "name":"BRANDILYN TEBO",
+        "description":"Transformational coach and Host of the Achievement Trap"
+      },
+      {
+        "image":"speaker-anastasia-nevin",
+        "name":"ANASTASIA NEVIN, RD RYT",
+        "description":"Nutrition therapist and yoga teacher focused on body-centered healing"
+      },
+      {
+        "image":"speaker-lexie-manion",
+        "name":"LEXIE MANION",
+        "description":"Body Positive Advocate. Founder of #BoycotttheBefore #FearlesslyFaceless"
+      }
+
+    ],
+    "epilogue":"More in the queue – we’re adding new experts and thought leaders every day!"
+  }
+]

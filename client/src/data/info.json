@@ -1,0 +1,67 @@
+[
+  {
+    "title":"Here’s A Look At What You’ll Takeaway…",
+    "description": {
+        "title":"The FoodBodyLove Rally will inspire you to STOP",
+        "reasons": [
+          "...religiously cutting carbs and counting calories",
+          "...punishing yourself when you skip the gym",
+          "...criticizing every contour of your body",
+          "...tying your happiness to a specific weight",
+          "...beating yourself up for bingeing"
+        ],
+        "conclusion": [
+          "With an all-star line-up of speakers as your biggest cheerleaders, you'll see HOW your relationship with food, body, and self CAN change."
+        ],
+        "subtitle":" Rally Talk Topics Include:"
+      },
+    "topics": [
+      {
+        "image":"info-psychology",
+        "title":"Psychology",
+        "facts": [
+          "• Train your brain to let go of destructive habits",
+          "• The unseen connection between emotions & eating",
+          "• Accept yourself at any size or shape"
+        ]
+      },
+      {
+        "image":"icon-nutrition",
+        "title":"Nutrition",
+        "facts": [
+          "• Work with your metabolism, not against it",
+          "• Learn the latest scientific research behind intuitive eating",
+          "• Find out what’s driving your binges & cravings"
+        ]
+      },
+      {
+        "image":"info-self-compassion",
+        "title":"Self-Compassion",
+        "facts": [
+          "• See your inner critic in a new light",
+          "• Identify ways to bring more acceptance into your life",
+          "• Skills you can use when shame hits hard"
+        ]
+      },
+      {
+        "image":"icon-mindfulness",
+        "title":"Mindfulness",
+        "facts": [
+          "• Stop the constant comparing & judgement",
+          "• Reduce anxiety and become more present in your daily life",
+          "• Slow down and learn to truly enjoy your meals"
+        ]
+      },
+      {
+        "image":"icon-energy-healing",
+        "title":"Energy Healing",
+        "facts": [
+          "• Rid yourself of toxic limiting beliefs",
+          "• Find new ways to strengthen your mind body connection",
+          "• Discover new energy systems of healing"
+        ]
+      }
+    ],
+    "epilogue":"Plus inspiring success stories to keep you motivated!"
+  }
+]
