@@ -1,8 +1,8 @@
 [
   {
-    "title":"What is Resonance?",
+    "title":"What is Resonance For?",
     "description": {
-        "title":"Resonance is",
+        "title":"Resonance is for",
         "reasons": [
           "...connecting with others who have the app",
           "...",
@@ -59,6 +59,6 @@
         ]
       }
     ],
-    "epilogue":"Plus inspiring success stories to keep you motivated!"
+    "epilogue":"Plus more upcoming features."
   }
 ]

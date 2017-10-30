@@ -7,7 +7,7 @@ import Artists from '../Artists/Artists'
 import FeaturedBy from '../FeaturedBy/FeaturedBy'
 import CallToAction from '../CallToAction/CallToAction'
 import Benefits from '../Benefits/Benefits'
-import CommonQuestions from '../CommonQuestions/CommonQuestions'
+import MainCallToAction from '../MainCallToAction/MainCallToAction'
 import Host from '../Host/Host'
 
 import HeaderData from '../../data/header.json'
@@ -17,7 +17,7 @@ import ArtistsData from '../../data/artists.json'
 import FeaturedByData from '../../data/featured-by.json'
 import CallToActionData from '../../data/call-to-action.json'
 import BenefitsData from '../../data/benefits.json'
-import CommonQuestionsData from '../../data/common-questions.json'
+import MainCallToActionData from '../../data/main-call-to-action.json'
 import HostData from '../../data/host.json'
 import EmailOptIn from '../EmailOptIn/EmailOptIn'
 import FreePassButton from '../FreePassButton/FreePassButton'
@@ -52,7 +52,7 @@ class Registration extends Component {
         <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn} />
         <Benefits data={BenefitsData[0]} />
         <CallToAction data={CallToActionData[1]} openEmailOptIn={this.openEmailOptIn}/>
-        <CommonQuestions data={CommonQuestionsData} />
+        <MainCallToAction data={MainCallToActionData} />
         <CallToAction data={CallToActionData[2]} openEmailOptIn={this.openEmailOptIn}/>
       </div>
     );
