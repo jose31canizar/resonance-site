@@ -3,7 +3,7 @@ import NavBar from '../NavBar/NavBar'
 import Header from '../Header/Header'
 import Info from '../Info/Info'
 import SpeakerIntro from '../SpeakerIntro/SpeakerIntro'
-import Speakers from '../Speakers/Speakers'
+import Artists from '../Artists/Artists'
 import FeaturedBy from '../FeaturedBy/FeaturedBy'
 import CallToAction from '../CallToAction/CallToAction'
 import Benefits from '../Benefits/Benefits'
@@ -13,7 +13,7 @@ import Host from '../Host/Host'
 import HeaderData from '../../data/header.json'
 import InfoData from '../../data/info.json'
 import SpeakerIntroData from '../../data/speaker-intro.json'
-import SpeakersData from '../../data/speakers.json'
+import ArtistsData from '../../data/artists.json'
 import FeaturedByData from '../../data/featured-by.json'
 import CallToActionData from '../../data/call-to-action.json'
 import BenefitsData from '../../data/benefits.json'
@@ -49,16 +49,11 @@ class Registration extends Component {
         <NavBar openEmailOptIn={this.openEmailOptIn}/>
         <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn}/>
         <Info data={InfoData[0]} openEmailOptIn={this.openEmailOptIn}/>
-        <SpeakerIntro data={SpeakerIntroData[0]}/>
-        <Speakers data={SpeakersData[0]} />
-        <FeaturedBy data={FeaturedByData[0]} />
         <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn} />
         <Benefits data={BenefitsData[0]} />
         <CallToAction data={CallToActionData[1]} openEmailOptIn={this.openEmailOptIn}/>
         <CommonQuestions data={CommonQuestionsData} />
         <CallToAction data={CallToActionData[2]} openEmailOptIn={this.openEmailOptIn}/>
-        <Host data={HostData[0]} />
-        <CallToAction data={CallToActionData[3]} openEmailOptIn={this.openEmailOptIn}/>
       </div>
     );
   }

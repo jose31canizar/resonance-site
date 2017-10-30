@@ -15,14 +15,11 @@ class Info extends Component {
             <p key={i}>{item}</p>
           ))}
         </div>
-        <div className='conclusion'>{this.props.data.description.conclusion.map((item, i) => (
-          <p key={i}>{item}</p>
-        ))}</div>
         <h3>{this.props.data.description.subtitle}</h3>
         <div className='first-row-topics'>
           {firstRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <img src={require(`../../img/${item.image}.png`)}/>
+              <img src={require(`../../img/${item.image}.jpg`)}/>
               <h4>{item.title}</h4>
               <div className='facts'>
               {item.facts.map((fact, i) => (
@@ -35,7 +32,7 @@ class Info extends Component {
         <div className='second-row-topics'>
           {secondRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <img src={require(`../../img/${item.image}.png`)}/>
+              <img src={require(`../../img/${item.image}.jpg`)}/>
               <h4>{item.title}</h4>
               <div className='facts'>
               {item.facts.map((fact, i) => (

@@ -8,7 +8,6 @@ class Benefits extends Component {
         <h2>{this.props.data.title}</h2>
         {this.props.data.benefits.map((benefit, i) => (
           <div className='benefit' key={i}>
-            <img src={require(`../../img/icon-benefit-${i+1}.png`)} />
             <p className='number'>{i+1}</p>
             <div className='content'>
               <h4>{benefit.title}</h4>

@@ -1,26 +1,30 @@
+button-color = #3a3339
+
 .free-pass-button
-  background: #F4C656
+  background: #ffc475
   border-radius: 0
   display: flex
   justify-content: center
   align-items: center
   margin: 50px 0
   transition: opacity 0.3s, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-  /*box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16)*/
+  box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16)
   cursor: pointer
-  z-index: 9
   -webkit-appearance: none
   h2.free-pass
-    color: white
     font-size: 1.9em
     text-align: center
     padding: 30px 50px
     white-space: nowrap
+    cursor: pointer
     @media all and (max-width: 700px)
       font-size: 1.5em
       padding: 30px 20px
       width: auto
-
+  h2.free-pass:hover
+    color: white
+    cursor: pointer
 .free-pass-button:hover
-  background: #FFE267
-  color: #FFFE267
+  cursor: pointer
+  background: button-color
+  color: white

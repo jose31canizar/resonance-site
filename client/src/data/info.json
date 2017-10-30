@@ -1,64 +1,61 @@
 [
   {
-    "title":"Here’s A Look At What You’ll Takeaway…",
+    "title":"What is Resonance?",
     "description": {
-        "title":"The FoodBodyLove Rally will inspire you to STOP",
+        "title":"Resonance is",
         "reasons": [
-          "...religiously cutting carbs and counting calories",
-          "...punishing yourself when you skip the gym",
-          "...criticizing every contour of your body",
-          "...tying your happiness to a specific weight",
-          "...beating yourself up for bingeing"
+          "...connecting with others who have the app",
+          "...",
+          "...",
+          "...",
+          "..."
         ],
-        "conclusion": [
-          "With an all-star line-up of speakers as your biggest cheerleaders, you'll see HOW your relationship with food, body, and self CAN change."
-        ],
-        "subtitle":" Rally Talk Topics Include:"
+        "subtitle":"Resonance Features Include:"
       },
     "topics": [
       {
-        "image":"info-psychology",
-        "title":"Psychology",
+        "image":"background",
+        "title":"Live Music Event Tracking",
         "facts": [
-          "• Train your brain to let go of destructive habits",
-          "• The unseen connection between emotions & eating",
-          "• Accept yourself at any size or shape"
+          "• Track live events near you",
+          "• Receive suggested events based on your preferences",
+          "• Sort them by price range"
         ]
       },
       {
-        "image":"icon-nutrition",
-        "title":"Nutrition",
+        "image":"background",
+        "title":"Live Music Event Tracking",
         "facts": [
-          "• Work with your metabolism, not against it",
-          "• Learn the latest scientific research behind intuitive eating",
-          "• Find out what’s driving your binges & cravings"
+          "• Track live events near you",
+          "• Receive suggested events based on your preferences",
+          "• Sort them by price range"
         ]
       },
       {
-        "image":"info-self-compassion",
-        "title":"Self-Compassion",
+        "image":"background",
+        "title":"Live Music Event Tracking",
         "facts": [
-          "• See your inner critic in a new light",
-          "• Identify ways to bring more acceptance into your life",
-          "• Skills you can use when shame hits hard"
+          "• Track live events near you",
+          "• Receive suggested events based on your preferences",
+          "• Sort them by price range"
         ]
       },
       {
-        "image":"icon-mindfulness",
-        "title":"Mindfulness",
+        "image":"background",
+        "title":"Live Music Event Tracking",
         "facts": [
-          "• Stop the constant comparing & judgement",
-          "• Reduce anxiety and become more present in your daily life",
-          "• Slow down and learn to truly enjoy your meals"
+          "• Track live events near you",
+          "• Receive suggested events based on your preferences",
+          "• Sort them by price range"
         ]
       },
       {
-        "image":"icon-energy-healing",
-        "title":"Energy Healing",
+        "image":"background",
+        "title":"Live Music Event Tracking",
         "facts": [
-          "• Rid yourself of toxic limiting beliefs",
-          "• Find new ways to strengthen your mind body connection",
-          "• Discover new energy systems of healing"
+          "• Track live events near you",
+          "• Receive suggested events based on your preferences",
+          "• Sort them by price range"
         ]
       }
     ],

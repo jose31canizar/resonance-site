@@ -23,7 +23,7 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.firstName + this.state.lastName)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'https://www.truewarrior.fm/congratulations/'
+    window.location.href = 'https://www.resonance.com/thankyou/'
     return false
   }
   addMember = () => {
@@ -55,8 +55,8 @@ class EmailOptIn extends Component {
     return (
       <div className="email-opt-in" onClick={this.props.closeEmailOptIn}>
         <div className="registration-block" onClick={this.handleClose}>
-          <h2>So excited for you to be a part of the FREE 7 day FoodBodyLove Rally!</h2>
-          <h4>Sign up to grab a spot and we'll see you Nov 13-19th.</h4>
+          <h2>Join us now.</h2>
+          <h4>Sign up to grab limited exclusive access to Resonance.</h4>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.firstName} onChange={this.handleFirstName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
