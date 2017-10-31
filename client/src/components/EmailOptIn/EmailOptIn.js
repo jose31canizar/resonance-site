@@ -23,7 +23,7 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.firstName + this.state.lastName)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'https://www.facebook.com/'
+    window.location.href = 'https://www.resonator.life/thankyou'
     return false
   }
   addMember = () => {
