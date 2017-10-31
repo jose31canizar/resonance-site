@@ -23,7 +23,7 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.firstName + this.state.lastName)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'https://www.resonance.com/thankyou/'
+    window.location.href = 'https://www.facebook.com/'
     return false
   }
   addMember = () => {
@@ -60,7 +60,7 @@ class EmailOptIn extends Component {
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.firstName} onChange={this.handleFirstName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
-            <input type="submit" value="GET YOUR FREE PASS!" />
+            <input type="submit" value="Get VIP access!" />
           </form>
         </div>
       </div>

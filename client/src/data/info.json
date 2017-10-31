@@ -2,11 +2,11 @@
   {
     "title":"About Resonance",
     "description": {
-        "title":"Hey! Music Resonators.",
+        "title":"Hello, Resonation.",
         "reasons": [
-            "• Join the best community of music resonators",
-            "• Learn about the best live events instantly.",
-            "• Discover your new favorite artists unexpectedly."
+            "• Connect with a community of music lovers.",
+            "• Learn about nearby live events instantly.",
+            "• Discover your new favorite artists."
         ],
         "subtitle":"Features"
       },
@@ -15,42 +15,42 @@
         "image":"background",
         "title":"Connect",
         "facts": [
-          "• Connect new artists and resonators",
-          "• Build up your music network"
+          "• Connect with other resonators and artists",
+          "• Build your music network for the next live concert!"
         ]
       },
       {
         "image":"background",
-        "title":"Coordinates",
+        "title":"Tracking",
         "facts": [
-          "• Track live events near you",
-          "• Receive suggested events"
+          "• Track live events near you.",
+          "• Receive suggested events tailored just for you."
         ]
       },
       {
         "image":"background",
-        "title":"Contacts",
+        "title":"Chat",
         "facts": [
-          "• Walkie Talkie your buddies without Internet."
+          "• Chat over Bluetooth with your lost buddies."
         ]
       },
       {
         "image":"background",
-        "title":"User Friendly",
+        "title":"Configurability",
         "facts": [
-          "• Minimalist Interfaces",
-          "• Simpliest info"
+          "• Our app's seamless interface make connecting with others a breeze.",
+          "• Customize, configure, and tailor the app just for you."
         ]
       },
       {
         "image":"background",
-        "title":"Payments Control",
+        "title":"Payment Control",
         "facts": [
-          "• Allow event resonators to sell tickets",
-          "• Secure your transactions seamlessly"
+          "• You and other resonators can sell tickets!",
+          "• Secure your transactions seamlessly."
         ]
       }
     ],
-    "epilogue":"Plus more upcoming superb features."
+    "epilogue":"Plus more upcoming epic features."
   }
 ]
