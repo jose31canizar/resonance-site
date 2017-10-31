@@ -19,7 +19,7 @@ class Info extends Component {
         <div className='first-row-topics'>
           {firstRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <img src={require(`../../img/${item.image}.jpg`)}/>
+              <img src={require(`../../img/${item.image}.png`)}/>
               <h4>{item.title}</h4>
               <div className='facts'>
               {item.facts.map((fact, i) => (
@@ -32,7 +32,7 @@ class Info extends Component {
         <div className='second-row-topics'>
           {secondRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <img src={require(`../../img/${item.image}.jpg`)}/>
+              <img src={require(`../../img/${item.image}.png`)}/>
               <h4>{item.title}</h4>
               <div className='facts'>
               {item.facts.map((fact, i) => (

@@ -12,7 +12,7 @@
       },
     "topics": [
       {
-        "image":"background",
+        "image":"connection_logo",
         "title":"Connect",
         "facts": [
           "• Connect with other resonators and artists",
@@ -20,7 +20,7 @@
         ]
       },
       {
-        "image":"background",
+        "image":"connection_logo",
         "title":"Tracking",
         "facts": [
           "• Track live events near you.",
@@ -28,14 +28,14 @@
         ]
       },
       {
-        "image":"background",
+        "image":"message_logo",
         "title":"Chat",
         "facts": [
           "• Chat over Bluetooth with your lost buddies."
         ]
       },
       {
-        "image":"background",
+        "image":"config_logo",
         "title":"Configurability",
         "facts": [
           "• Our app's seamless interface make connecting with others a breeze.",
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "image":"background",
+        "image":"payments_logo",
         "title":"Payment Control",
         "facts": [
           "• You and other resonators can sell tickets!",

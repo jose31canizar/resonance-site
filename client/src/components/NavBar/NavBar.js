@@ -55,8 +55,8 @@ class NavBar extends Component {
       <div className='nav-bar-wrapper'>
         <div className={'nav-bar' + (this.state.flip ? ' flip' : '')}>
           <div className='nav-bar-header'>
-            <img className='icon' src={require('../../img/icon.png')} />
-            <h1>RESONANCE</h1>
+            <img className='icon' src={require('../../img/resonance_logo_icon.png')} />
+            <h1>resonance</h1>
           </div>
           <FreePassButton openEmailOptIn={this.props.openEmailOptIn}/>
         </div>
