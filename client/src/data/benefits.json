@@ -1,16 +1,16 @@
 [
   {
-    "title":"Why you'll want to join Resonance",
+    "title":"Why Resonance?",
     "benefits": [
       {
-        "title":"Find music goers instantly.",
-        "problem":"No more searching for strangers on Facebook.",
-        "solution":"Resonance finds those who where at events you went to, but never met."
+        "title":"Connect new resonators!",
+        "problem":"No more searching for live-music strangers on Facebook.",
+        "solution":"Resonance finds those goers at events you went to, but never met."
       },
       {
-        "title":"Find music goers instantly.",
-        "problem":"No more searching for strangers on Facebook.",
-        "solution":"Resonance finds those who where at events you went to, but never met."
+        "title":"Find your lost buddies!",
+        "problem":"No more worried when you get lost at events.",
+        "solution":"Resonance make sure you can contact your buddies without cellular."
       }
     ]
   }

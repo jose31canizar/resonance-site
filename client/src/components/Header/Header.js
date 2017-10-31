@@ -59,8 +59,8 @@ class Header extends Component {
             <p>{this.props.data.description}</p>
             <p>{this.props.data.offer}</p>
             <div className='ticket'>
-              <img src={require('../../img/header-ticket.png')} />
-              <p><b>Grab your VIP ticket to the </b><span>Resonance App Release</span></p>
+              <img src={require('../../img/header-ticket.png')}/>
+              <p><b>Grab your VIP access to the </b><span>Resonance Release</span></p>
             </div>
           </div>
         </div>

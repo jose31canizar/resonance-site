@@ -49,11 +49,8 @@ class Registration extends Component {
         <NavBar openEmailOptIn={this.openEmailOptIn}/>
         <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn}/>
         <Info data={InfoData[0]} openEmailOptIn={this.openEmailOptIn}/>
-        <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn} />
         <Benefits data={BenefitsData[0]} />
-        <CallToAction data={CallToActionData[1]} openEmailOptIn={this.openEmailOptIn}/>
-        <MainCallToAction data={MainCallToActionData} />
-        <CallToAction data={CallToActionData[2]} openEmailOptIn={this.openEmailOptIn}/>
+        <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}/>
       </div>
     );
   }

@@ -1,64 +1,56 @@
 [
   {
-    "title":"What is Resonance For?",
+    "title":"About Resonance",
     "description": {
-        "title":"Resonance is for",
+        "title":"Hey! Music Resonators.",
         "reasons": [
-          "...connecting with others who have the app",
-          "...",
-          "...",
-          "...",
-          "..."
+            "• Join the best community of music resonators",
+            "• Learn about the best live events instantly.",
+            "• Discover your new favorite artists unexpectedly."
         ],
-        "subtitle":"Resonance Features Include:"
+        "subtitle":"Features"
       },
     "topics": [
       {
         "image":"background",
-        "title":"Live Music Event Tracking",
+        "title":"Connect",
         "facts": [
-          "• Track live events near you",
-          "• Receive suggested events based on your preferences",
-          "• Sort them by price range"
+          "• Connect new artists and resonators",
+          "• Build up your music network"
         ]
       },
       {
         "image":"background",
-        "title":"Live Music Event Tracking",
+        "title":"Coordinates",
         "facts": [
           "• Track live events near you",
-          "• Receive suggested events based on your preferences",
-          "• Sort them by price range"
+          "• Receive suggested events"
         ]
       },
       {
         "image":"background",
-        "title":"Live Music Event Tracking",
+        "title":"Contacts",
         "facts": [
-          "• Track live events near you",
-          "• Receive suggested events based on your preferences",
-          "• Sort them by price range"
+          "• Walkie Talkie your buddies without Internet."
         ]
       },
       {
         "image":"background",
-        "title":"Live Music Event Tracking",
+        "title":"User Friendly",
         "facts": [
-          "• Track live events near you",
-          "• Receive suggested events based on your preferences",
-          "• Sort them by price range"
+          "• Minimalist Interfaces",
+          "• Simpliest info"
         ]
       },
       {
         "image":"background",
-        "title":"Live Music Event Tracking",
+        "title":"Payments Control",
         "facts": [
-          "• Track live events near you",
-          "• Receive suggested events based on your preferences",
-          "• Sort them by price range"
+          "• Allow event resonators to sell tickets",
+          "• Secure your transactions seamlessly"
         ]
       }
     ],
-    "epilogue":"Plus more upcoming features."
+    "epilogue":"Plus more upcoming superb features."
   }
 ]
