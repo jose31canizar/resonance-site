@@ -50,7 +50,7 @@ class Header extends Component {
           <h2>{this.props.data.headline}</h2>
         </div>
         <div className='header-content'>
-            <video width={this.state.width} height={this.state.height} autoPlay loop>
+            <video autoPlay loop>
               <source src={require("../../img/Resonance-App.mp4")} type="video/mp4"/>
             </video>
           <div className='description'>

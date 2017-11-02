@@ -10,6 +10,7 @@ h1 {
   color: white;
   position: absolute;
 }
-#root {
+div {
+  background: #888888;
   height: 100vh;
 }

@@ -24,7 +24,7 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.firstName + this.state.lastName)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'http://resonator.life/index2.html'
+    setTimeout(function(){window.location.href='/thankyou'} , 2000);
     // this.context.router.transitionTo('https://localhost:9001/thankyou')
     return false
   }
