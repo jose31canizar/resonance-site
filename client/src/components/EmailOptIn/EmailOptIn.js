@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './EmailOptIn.styl'
+import { Link } from 'react-router-dom'
 
 class EmailOptIn extends Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.name)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'https://www.resonator.life/thankyou'
+    window.location.href = 'http://resonator.life/index2.html'
+    // this.context.router.transitionTo('https://localhost:9001/thankyou')
     return false
   }
   addMember = () => {

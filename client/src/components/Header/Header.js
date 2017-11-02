@@ -50,11 +50,9 @@ class Header extends Component {
           <h2>{this.props.data.headline}</h2>
         </div>
         <div className='header-content'>
-            <div className="wistia_responsive_padding" style={{position:'relative', width: '55%', marginLeft: '5%'}}>
-            <div className="wistia_responsive_wrapper" style={{height:'100%',left:'0',position:'relative',top:'0',width:'100%', display: 'flex', justifyContent: 'center'}}>
-            <iframe src="https://fast.wistia.net/embed/iframe/fswqtkvea9" title="Wistia video player" allowTransparency="true" frameBorder="0" scrolling="no" className="wistia_embed" name="wistia_embed" allowFullScreen width={this.state.width} height={this.state.width*0.5625}></iframe>
-            </div>
-            </div>
+            <video width={this.state.width} height={this.state.height} autoPlay loop>
+              <source src={require("../../img/Resonance-App.mp4")} type="video/mp4"/>
+            </video>
           <div className='description'>
             <p>{this.props.data.description}</p>
             <p>{this.props.data.offer}</p>
