@@ -58,7 +58,7 @@ class NavBar extends Component {
             <img className='icon' src={require('../../img/resonance_logo_icon.png')} />
             <h1>resonance</h1>
           </div>
-          <FreePassButton openEmailOptIn={this.props.openEmailOptIn}/>
+          <h1>Connect. Experience. Discover.</h1>
         </div>
       </div>
     );

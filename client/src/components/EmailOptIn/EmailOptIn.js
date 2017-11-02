@@ -62,7 +62,7 @@ class EmailOptIn extends Component {
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.firstName} onChange={this.handleFirstName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
-            <input type="submit" value="Get VIP access!" />
+            <input type="submit" value="Sign me up!" />
           </form>
         </div>
       </div>

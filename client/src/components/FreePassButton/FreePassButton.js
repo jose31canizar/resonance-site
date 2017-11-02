@@ -5,7 +5,7 @@ class FreePassButton extends Component {
   render() {
     return (
       <div className="free-pass-button" onMouseDown={this.props.openEmailOptIn}>
-        <h2 className='free-pass'>Exclusive Access!</h2>
+        <h2 className='free-pass'>Subscribe!</h2>
       </div>
     );
   }
