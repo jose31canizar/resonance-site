@@ -24,7 +24,7 @@ class EmailOptIn extends Component {
     console.log('A name was submitted: ' + this.state.email + this.state.name)
     this.addMember()
     event.preventDefault()
-    window.location.href = 'http://resonator.life/index2.html'
+    setTimeout(function(){window.location.href='/thankyou'} , 2000);
     // this.context.router.transitionTo('https://localhost:9001/thankyou')
     return false
   }
@@ -62,7 +62,7 @@ class EmailOptIn extends Component {
           <form onSubmit={this.handleSubmit}>
             <input placeholder="John Resonate" type="text" value={this.state.name} onChange={this.handleName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
-            <input type="submit" value="Get Exclusive Access!" />
+            <input type="submit" value="Sign me up!" />
           </form>
         </div>
       </div>

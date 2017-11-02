@@ -7,7 +7,7 @@ var mc_api_key = process.env.MAILCHIMP_API_KEY;
 var list_id = process.env.MAILING_LIST_ID;
 
 const app = express();
-const cors = require('cors')
+// const cors = require('cors')
 const mailchimp = new Mailchimp(mc_api_key);
 
 app.use(express.static(path.resolve(__dirname, '../', 'build')));
@@ -22,11 +22,8 @@ app.options('*', function (req, res) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.status(200).end();
 });
-const corsOptions = {
-  origin: 'https://www.truewarrior.fm/congratulations/'
-}
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
 //routes
 app.get('/api/memberList', (req, res) => {
   mailchimp.get(`/lists/${list_id}/members`)
