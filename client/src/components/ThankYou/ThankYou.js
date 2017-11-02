@@ -5,7 +5,7 @@ class ThankYou extends Component {
   render() {
     return (
         <div className="thank-you">
-          <h1>Thanks for joining Resonance. We'll email you more about our exclusive app.</h1>
+          <h1>Thanks for joining Resonance. We'll email you about upcoming features.</h1>
         </div>
     );
   }
