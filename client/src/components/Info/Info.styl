@@ -50,7 +50,7 @@
   .reasons
     padding-bottom: 30px
   .first-row-topics
-    width: 70%
+    width: 100%
     display: grid
     column-gap: 1em
     grid-row-gap: 100px
@@ -65,11 +65,18 @@
     justify-content: center
     align-content: center
     .imgFeature
-      width: 75%
+      width: 100%
       margin: auto
       justify-content: center;
+    .topic
+      width: 60%
+      @media all and (max-width: 700px)
+        width: 100%
+        padding: 0 40px
+        box-sizing: border-box
+        margin-bottom: 40px
   .second-row-topics
-    width: 70%
+    width: 100%
     padding-top: 90px
     margin-top: 100px
     @media all and (max-width: 700px)
@@ -89,7 +96,7 @@
     justify-content: center
     align-content: center
     .topic
-      width: 100%
+      width: 60%
       @media all and (max-width: 700px)
         width: 100%
         padding: 0 40px
