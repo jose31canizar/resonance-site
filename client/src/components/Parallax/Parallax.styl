@@ -1,0 +1,15 @@
+$bg-color: white
+
+.parallax
+  height: 80vh
+  @media all and (max-width: mobile-width)
+    height: 100vh
+  width: 100vw
+  background: $bg-color
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  @include user-select(none)
+  @include user-drag(none)
+  z-index: 2

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import SmoothScroll from '../SmoothScroll/SmoothScroll'
 import './NavBar.styl'
 import FreePassButton from '../FreePassButton/FreePassButton'
+import Parallax from '../Parallax/Parallax'
 
 class NavBar extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class NavBar extends Component {
   render() {
     return (
       <div className='nav-bar-wrapper'>
+        <Parallax className='nav-bar-background' src={require('../../img/background_2.jpg')} />
         <div className={'nav-bar' + (this.state.flip ? ' flip' : '')}>
           <div className='nav-bar-header'>
             <img className='icon' src={require('../../img/resonance_logo_icon.png')} />

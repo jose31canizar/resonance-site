@@ -60,7 +60,7 @@ class EmailOptIn extends Component {
           <h2>Join us now.</h2>
           <h4>Subscribe to grab limited exclusive access to Resonance.</h4>
           <form onSubmit={this.handleSubmit}>
-            <input placeholder="John Resonate" type="text" value={this.state.name} onChange={this.handleName} />
+            <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
             <input type="submit" value="Sign me up!" />
           </form>

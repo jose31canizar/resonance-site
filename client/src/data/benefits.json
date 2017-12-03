@@ -3,19 +3,19 @@
     "title":"Why Resonance?",
     "benefits": [
       {
-        "title":"Connect with other resonators!",
-        "problem":"No more searching for strangers on Facebook to go to concerts with.",
+        "title":"Connect with other resonators.",
+        "problem":"Easily find friends to go to concerts with.",
         "solution":"Resonance suggests users who attended similar events."
       },
       {
-        "title":"Find your lost buddies!",
-        "problem":"No more worrying about your friends getting lost at events.",
-        "solution":"Resonance allows you to contact your buddies when you have no service."
+        "title":"Experience live music.",
+        "problem":"Find events near you and catered towards your tastes.",
+        "solution":"See trending concerts and shows your friends are going to."
       },
       {
-        "title":"Get discounts on merch!",
-        "problem":"No more worrying about the tall guy in front of you filming the entire concert.",
-        "solution":"Resonance gives you more points the longer you keep that phone tucked in your pocket."
+        "title":"Discover.",
+        "problem":"See trending artists and their creative content.",
+        "solution":"Like and share posts from ongoing concerts."
       }
     ]
   }

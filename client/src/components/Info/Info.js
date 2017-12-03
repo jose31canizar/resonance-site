@@ -4,8 +4,8 @@ import './Info.styl'
 
 class Info extends Component {
   render() {
-    const firstRowOfTopics = this.props.data.topics.slice(0,3)
-    const secondRowOfTopics = this.props.data.topics.slice(3,6)
+    const firstRowOfTopics = this.props.data.topics.slice(0,2)
+    const secondRowOfTopics = this.props.data.topics.slice(2,6)
     return (
       <div className="info">
         <h2>{this.props.data.title}</h2>

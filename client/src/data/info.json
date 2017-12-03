@@ -28,13 +28,6 @@
         ]
       },
       {
-        "image":"message_logo",
-        "title":"Chat",
-        "facts": [
-          "• Chat over Bluetooth with your lost buddies."
-        ]
-      },
-      {
         "image":"config_logo",
         "title":"Configurability",
         "facts": [

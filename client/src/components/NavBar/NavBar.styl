@@ -1,5 +1,6 @@
 nav-bar-height = 100px
 nav-bar-color = white
+nav-bar-text-color = white
 
 .flip
   transform: rotate3d(1, 0, 0, -90deg)
@@ -11,15 +12,24 @@ nav-bar-color = white
   left: 0
   width: 100%
   z-index: 11
-  @media all and (max-width: 700px)
+  overflow: hidden
+  background: url('../../img/background_3.jpg')
+  background-position: 50% 50%
+  @media all and (max-width: 1200px)
+    overflow: visible
+    background: white
     position: relative
     transform: translate3d(0, 0, 0)
+.nav-bar-background
+  height: 130px
+  width: 100%
+  position: absolute
+  @media all and (max-width: 1200px)
+    height: 100vh
 .nav-bar
-  background: nav-bar-color
-  position: fixed
   top: 0
   left: 0
-  z-index: 99
+  z-index: 1
   width: 100%
   display: flex
   align-items: center
@@ -32,9 +42,15 @@ nav-bar-color = white
   box-sizing: border-box
   height: 130px
   overflow: hidden
-  @media all and (max-width: 700px)
-    height: auto
-    display: block
+  @media all and (max-width: 1200px)
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    box-shadow: none
   .free-pass-button
     margin: 20px 0
     padding: 0
@@ -47,7 +63,12 @@ nav-bar-color = white
         padding: 18px 23px
   h1
     padding: 0px 15px
-    color: #4c4d54
+    color: nav-bar-text-color
+    z-index: 1
+    @media all and (max-width: 1200px)
+      padding: 20px 15px
+      width: 50%
+      text-align: center
   .logo
     width: 50px
     height: 50px
@@ -58,8 +79,10 @@ nav-bar-color = white
     padding: 0
     align-items: center
     justify-content: flex-start
-    @media all and (max-width: 700px)
+    z-index: 1
+    @media all and (max-width: 1200px)
         padding-top: 20px
+        justify-content: center
     .icon
       max-width: 100px
       min-width: 75px
@@ -100,7 +123,7 @@ nav-bar-color = white
 
     .nav-link
       text-decoration: none
-      color: #635656
+      color: nav-bar-text-color
       font-weight: 100
       z-index: 9
 
@@ -109,4 +132,4 @@ nav-bar-color = white
       padding: 0px 10px
 
     .selected-page
-      color: #dea1a1
+      color: nav-bar-text-color
