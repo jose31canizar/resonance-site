@@ -57,8 +57,8 @@ class EmailOptIn extends Component {
     return (
       <div className="email-opt-in" onClick={this.props.closeEmailOptIn}>
         <div className="registration-block" onClick={this.handleClose}>
-          <h2>Join us now.</h2>
-          <h4>Subscribe to grab limited exclusive access to Resonance.</h4>
+          <h2>Resonate with us.</h2>
+          <h4>Be the first to get exclusive access to the Resonance app.</h4>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />

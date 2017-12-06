@@ -15,16 +15,22 @@
         "image":"connection_logo",
         "title":"Connect",
         "facts": [
-          "• Connect with other resonators and artists",
-          "• Build your music network for the next live concert!"
+          "• Connect with other resonators and artists.",
+          "• Become a part of the live music community!"
         ]
       },
       {
-        "image":"tracking_logo",
-        "title":"Tracking",
+        "image":"connection_logo",
+        "title":"Experience",
+        "facts": [
+        ]
+      },
+      {
+        "image":"connection_logo",
+        "title":"Discover",
         "facts": [
           "• Track live events near you.",
-          "• Receive suggested events tailored just to your taste."
+          "• Find ."
         ]
       },
       {
@@ -33,14 +39,6 @@
         "facts": [
           "• Our app's seamless interface make connecting with others a breeze.",
           "• Customize, configure, and tailor according to your preferences."
-        ]
-      },
-      {
-        "image":"payments_logo",
-        "title":"Payment Control",
-        "facts": [
-          "• You and other resonators can sell tickets!",
-          "• Secure your transactions seamlessly."
         ]
       }
     ],
