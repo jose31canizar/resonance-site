@@ -34,14 +34,22 @@
     align-items: center
     width: 100%
     align-items: center
+    position: relative
     @media all and (max-width: 1200px)
       justify-content: center
       flex-direction: column
       width: 80%
-    .video
-      width: 45%
-      height: auto
+    video
+      object-position: 50% 50%
+      width: 300px
+      height: 533px
+      object-fit: cover
+      border-radius: 35px
+      overflow: hidden
       background: white
+      display: block
+      @media all and (max-width: 1200px)
+        display: none
     .description
       width: 40%
       padding: 20px 0px 0px 0px

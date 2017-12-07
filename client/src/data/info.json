@@ -12,25 +12,27 @@
       },
     "topics": [
       {
-        "image":"connection_logo",
+        "image":"chat",
         "title":"Connect",
         "facts": [
-          "• Connect with other resonators and artists.",
+          "• Connect with other resonators and artists that you love.",
           "• Become a part of the live music community!"
         ]
       },
       {
-        "image":"connection_logo",
+        "image":"headphones_logo",
         "title":"Experience",
         "facts": [
+          "• Share your concert experiences with your friends.",
+          ""
         ]
       },
       {
-        "image":"connection_logo",
+        "image":"planet-earth",
         "title":"Discover",
         "facts": [
-          "• Track live events near you.",
-          "• Find ."
+          "• Discover live events near you.",
+          "• Find events with audiences you'll vibe with."
         ]
       },
       {

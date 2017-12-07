@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Parallax.styl'
 
 class Parallax extends Component {
   constructor(props) {
@@ -36,6 +37,9 @@ class Parallax extends Component {
     }
     return (
       <div className={"parallax " + this.props.className} style={styles}>
+        <video autoPlay muted loop>
+           <source src={require("../../img/concert.MOV")} type="video/mp4"/>
+        </video>
       </div>
     );
   }

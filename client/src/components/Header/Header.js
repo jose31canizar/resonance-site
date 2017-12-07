@@ -50,6 +50,9 @@ class Header extends Component {
           <h2>{this.props.data.headline}</h2>
         </div>
         <div className='header-content'>
+          <video autoPlay mute loop>
+            <source src={require("../../img/concert.MOV")} type="video/mp4"/>
+          </video>
           <div className='description'>
             <p>{this.props.data.description}</p>
             <p>{this.props.data.offer}</p>
@@ -67,7 +70,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-// <video autoPlay loop>
-//   <source src={require("../../img/Resonance-App.mp4")} type="video/mp4"/>
-// </video>
