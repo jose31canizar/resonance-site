@@ -3,19 +3,19 @@
     "title":"Why Resonance?",
     "benefits": [
       {
-        "title":"Connect with other resonators.",
-        "problem":"Easily find friends to go to concerts with.",
-        "solution":"Resonance suggests users who attended similar events."
+        "title":"First of its kind.",
+        "problem":"No other platforms provide a new community for each individual show.",
+        "solution":"Find new artists, search for upcoming concerts, and share with others who appreciate the same kind of music you do all in one app!"
       },
       {
-        "title":"Experience live music.",
-        "problem":"Find events near you and catered towards your tastes.",
-        "solution":"See trending concerts and shows your friends are going to."
+        "title":"A discovery process that actually works.",
+        "problem":"Artist and concert suggestions don’t just take your favorite artists and genres into consideration. Our algorithm uses information from other music lovers that you Resonate with.",
+        "solution":"It’s like when your friend who has really good taste in music gets handed the aux cord."
       },
       {
-        "title":"Discover.",
-        "problem":"See trending artists and their creative content.",
-        "solution":"Like and share posts from ongoing concerts."
+        "title":"The community.",
+        "problem":"See what plans people have for upcoming shows.",
+        "solution":"Stay connected with new people you meet, whether you want to meet up with them at another show or just see new music they’ve been listening to."
       }
     ]
   }

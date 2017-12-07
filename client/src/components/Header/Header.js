@@ -50,7 +50,7 @@ class Header extends Component {
           <h2>{this.props.data.headline}</h2>
         </div>
         <div className='header-content'>
-          <video autoPlay mute loop>
+          <video autoplay mute loop>
             <source src={require("../../img/concert.MOV")} type="video/mp4"/>
           </video>
           <div className='description'>
