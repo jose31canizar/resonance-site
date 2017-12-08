@@ -51,6 +51,9 @@
       white-space: normal;
   .reasons
     padding-bottom: 30px
+    p
+      @media all and (max-width: 700px)
+        font-size: 1.5em
   .first-row-topics
     width: 100%
     display: grid
@@ -66,10 +69,6 @@
     justify-items: center
     justify-content: center
     align-content: center
-    .imgFeature
-      width: 100%
-      margin: auto
-      justify-content: center;
     .topic
       width: 60%
       @media all and (max-width: 700px)
@@ -111,6 +110,13 @@
       padding: 0 40px
       box-sizing: border-box
       margin-bottom: 40px
+    .img-feature
+      width: 100%
+      margin: auto
+      justify-content: center
+      @media all and (max-width: 700px)
+        padding: 50px
+        box-sizing: border-box
     .facts
       p
         @media all and (max-width: 700px)

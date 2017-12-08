@@ -19,8 +19,8 @@ class Info extends Component {
         <div className='first-row-topics'>
           {firstRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <div className='imgFeature'>
-              <img className='imgFeature' src={require(`../../img/${item.image}.png`)}/>
+              <div className='img-feature'>
+              <img src={require(`../../img/${item.image}.png`)}/>
               </div>
               <h4>{item.title}</h4>
               <div className='facts'>
@@ -34,7 +34,7 @@ class Info extends Component {
         <div className='second-row-topics'>
           {secondRowOfTopics.map((item, i) => (
             <div className='topic' key={i}>
-              <div className='imgFeature'>
+              <div className='img-feature'>
               <img src={require(`../../img/${item.image}.png`)}/>
               </div>
               <h4>{item.title}</h4>
