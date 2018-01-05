@@ -7,7 +7,8 @@ class EmailOptIn extends Component {
     super(props)
     this.state = {
       name: '',
-      email: ''
+      email: '',
+      yOffset: 0
     }
     this.handleName = this.handleName.bind(this)
     this.handleEmail = this.handleEmail.bind(this)
@@ -53,12 +54,27 @@ class EmailOptIn extends Component {
   handleClose(e) {
     e.stopPropagation()
   }
+  componentWillUnmount() {
+    document.body.style.position = 'absolute';
+    document.body.style.top = '0px';
+    window.scrollTo(0, this.state.yOffset);
+  }
+  componentDidMount() {
+    var modal = document.getElementsByClassName('email-opt-in');
+    var body = document.body;
+    var y = window.pageYOffset;
+    this.setState({yOffset: y});
+    modal[0].style.top = y + 'px';
+    body.style.top = '-' + y.toString() + 'px';
+
+    document.body.style.position = 'fixed';
+  }
   render() {
     return (
       <div className="email-opt-in" onClick={this.props.closeEmailOptIn}>
         <div className="registration-block" onClick={this.handleClose}>
           <h2>Resonate with us.</h2>
-          <h4>Be the first to get exclusive access to the Resonance app.</h4>
+          <h3>Be the first to get exclusive access to the Resonance app.</h3>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} />
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />

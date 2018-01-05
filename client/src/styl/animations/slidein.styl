@@ -1,14 +1,13 @@
-@mixin slidein($t) {
--webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */
-   -moz-animation: slidein $t; /* Firefox < 16 */
-    -ms-animation: slidein $t; /* Internet Explorer */
-     -o-animation: slidein $t; /* Opera < 12.1 */
-        animation: slidein $t;
-}
+@mixin slidein($t)
+  -webkit-animation: slidein $t /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: slidein $t /* Firefox < 16 */
+  -ms-animation: slidein $t /* Internet Explorer */
+  -o-animation: slidein $t /* Opera < 12.1 */
+  animation: slidein $t
 
 @keyframes slidein {
   0% {
-    transform: translate3d(0, -3.1vh,0);
+    transform: translate3d(0, -5vh,0);
   }
   100% {
     transform: translate3d(0, 0,0);

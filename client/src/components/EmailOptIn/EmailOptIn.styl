@@ -1,12 +1,15 @@
-button-color = #7f35b2
+button-color = #fff
+button-hover-color = #2f2e31
+button-border-color = #352626
+theme-color = #79737d
 
 .email-opt-in
+  animation: fadein 1s
   a
     width: 100%
   width: 100%
   height: 100vh
-  position: fixed
-  top: 0
+  position: absolute
   z-index: 12
   background: rgba(82, 72, 72, 0.5)
   display: flex
@@ -14,17 +17,16 @@ button-color = #7f35b2
   align-items: center
   flex-direction: column
   .registration-block
-    animation: slidein 1s
+    animation: slidein 0.5s ease-in-out
     background: white
     width: 75%
-    padding: 100px 50px
-    padding-top: 70px
+    padding: 50px 50px
     box-sizing: border-box
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
-    border-radius: 2em
+    border-radius: 0
     @media all and (max-width: 700px)
       width: 100%
       padding: 20px 0
@@ -36,16 +38,17 @@ button-color = #7f35b2
       @media all and (max-width: 700px)
         padding: 0
         padding-bottom: 10px
-        font-size: 1.4em
+        font-size: 2.4em
         width: 75%
-    h4
+    h3
+      font-weight: 100
       text-align: center
       color: #6A5B68
       padding-bottom: 25px
       cursor: default
       @media all and (max-width: 700px)
         padding: 0 10px
-        font-size: 1em
+        font-size: 1.7em
         width: 60%
     form
       width: 90%
@@ -54,28 +57,27 @@ button-color = #7f35b2
       align-items: center
       flex-direction: column
       input
-        -webkit-appearance: none
-        -moz-appearance: none
-        appearance: none
-        width: 100%
-        border: 0.5px solid #c3b2b2
-        border-radius: 1px
-        padding: 1em 15px
-        font-size: 1.5em
-        box-sizing: border-box
-        outline: none
-        margin-top: 20px
-        background: #f9f9f9
+        width: 100%;
+        -webkit-appearance: none;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 2.5em;
+        border-bottom: 0.5pt solid theme-color
+        -webkit-text-fill-color: theme-color
+        caret-color: theme-color
+        padding-bottom: 10px;
+        text-transform: lowercase;
+        margin: 10px 0
         @media all and (max-width: 700px)
           margin-top: 10px
           padding: 15px 5px
-          font-size: 1em
       input[type=submit]
         user-select: none
         cursor: pointer
-        border: none
-        background: #ff9800
-        color: white
+        border: 2pt solid button-border-color
+        background: button-color
+        -webkit-text-fill-color: button-border-color
         transition: opacity 0.3s, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         /*box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16)*/
         padding: 20px 0
@@ -83,10 +85,12 @@ button-color = #7f35b2
         -webkit-appearance: none
         text-align: center
         font-size: 2em
+        font-family: Gotham
         font-weight: 900
         @media all and (max-width: 700px)
           white-space: pre-line
-          font-size: 1em
+          font-size: 2em
       input[type=submit]:hover
-        background: button-color
-        color: #FFFFFF
+        background: button-hover-color
+        border-color: button-hover-color
+        -webkit-text-fill-color: white

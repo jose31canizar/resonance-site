@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Benefits.styl'
+import ScrollReveal from '../ScrollReveal/ScrollReveal'
 
 class Benefits extends Component {
   render() {
@@ -7,6 +8,7 @@ class Benefits extends Component {
       <div className="benefits">
         <h2>{this.props.data.title}</h2>
         {this.props.data.benefits.map((benefit, i) => (
+          <ScrollReveal id={'reveal-benefit-' + i}>
           <div className='benefit' key={i}>
             <p className='number'>{i+1}</p>
             <div className='content'>
@@ -15,6 +17,7 @@ class Benefits extends Component {
               <p>{benefit.solution}</p>
             </div>
           </div>
+          </ScrollReveal>
         ))}
       </div>
     );

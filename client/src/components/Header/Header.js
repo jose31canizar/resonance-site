@@ -63,7 +63,7 @@ class Header extends Component {
           </div>
         </div>
 
-        <FreePassButton openEmailOptIn={this.props.openEmailOptIn}/>
+        <FreePassButton openEmailOptIn={this.props.openEmailOptIn} white/>
       </div>
     );
   }
