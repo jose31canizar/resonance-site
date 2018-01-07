@@ -7,7 +7,6 @@
   display: flex
   justify-content: center
   flex-direction: column
-  align-items: center
   @media all and (max-width: 1500px)
     padding: 0
     padding-top: 120px
@@ -38,7 +37,6 @@
     @media all and (max-width: 1200px)
       justify-content: center
       flex-direction: column
-      width: 80%
     video
       object-position: 50% 50%
       width: 300px
@@ -65,39 +63,26 @@
       display: flex
       justify-content: center
       align-items: center
+      flex-direction: column
       @media all and (max-width: 1200px)
         width: 100%
       @media all and (max-width: 700px)
         width: 100%
-      p
-        text-align: left
+  .ticket-text
+    text-align: center
+    padding: 50px
+    box-sizing: border-box
   p
     margin: 0
-    margin-left: 25px
     padding: 20px
+    text-align: center
+    font-size: 2em
     @media all and (max-width: 1200px)
       margin-left: 0
       display: flex
       justify-content: center
       align-items: center
       flex-direction: column
-    span
-      color: #ff9800
-      font-size: 1.3em
-      @media all and (max-width: 1200px)
-        font-size: 1.5em
-  p
-    font-size: 2em
-    @media all and (max-width: 1200px)
-      font-size: 1.7em
-  b
-    font-size: 1.3em
-    text-align: center
-    @media all and (max-width: 1200px)
+      font-size: 2.7em
+    @media all and (max-width: 700px)
       font-size: 1.5em
-      text-align: center
-  .wistia_responsive_padding
-    width: 55%
-    @media all and (max-width: 1024px)
-      width: 100% !important
-      margin-left: 0 !important

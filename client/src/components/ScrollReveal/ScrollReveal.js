@@ -36,7 +36,7 @@ export default class Info extends Component {
   }
   render() {
     return (
-      <div id={this.props.id} style={{ width: '100%'}}>
+      <div id={this.props.id}>
         <div className='scroll-reveal' style={{visibility: this.state.show ? 'visible' : 'hidden', animation: this.state.show ? 'reveal 1s' : 'none'}}>
         {this.props.children}
         </div>

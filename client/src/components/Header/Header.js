@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import FreePassButton from '../FreePassButton/FreePassButton'
+import ScrollReveal from '../ScrollReveal/ScrollReveal'
 import './Header.styl'
 
 class Header extends Component {
@@ -58,12 +59,13 @@ class Header extends Component {
             <p>{this.props.data.offer}</p>
             <div className='ticket'>
               <img src={require('../../img/ticket.png')}/>
-              <p><b>Grab your VIP access to the </b><span>Resonance Release</span></p>
             </div>
           </div>
         </div>
-
-        <FreePassButton openEmailOptIn={this.props.openEmailOptIn} white/>
+        <ScrollReveal id='reveal-header'>
+          <h2 className='ticket-text'>Grab your VIP access to the Resonance Release</h2>
+          <FreePassButton openEmailOptIn={this.props.openEmailOptIn} white/>
+        </ScrollReveal>
       </div>
     );
   }
