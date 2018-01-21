@@ -6,6 +6,7 @@ import './Header.styl'
 class Header extends Component {
   render() {
     const { buttonType } = this.props
+    const { description, offer, statement } = this.props.data
     return (
       <div className="header">
         <div className='headline'>
@@ -16,15 +17,15 @@ class Header extends Component {
             <source src={require("../../img/concert.MOV")} type="video/mp4"/>
           </video>
           <div className='description'>
-            <p>{this.props.data.description}</p>
-            <p>{this.props.data.offer}</p>
+            <p>{ description }</p>
+            <p>{ offer }</p>
             <div className='ticket'>
               <img src={require('../../img/ticket.png')}/>
             </div>
           </div>
         </div>
         <ScrollReveal id='reveal-header'>
-          <h2 className='ticket-text'>Grab your VIP access to the Resonance Release</h2>
+          <h2 className='ticket-text'>{ statement }</h2>
           <FreePassButton buttonType={buttonType} openEmailOptIn={this.props.openEmailOptIn} white/>
         </ScrollReveal>
       </div>

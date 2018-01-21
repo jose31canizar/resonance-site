@@ -18,9 +18,11 @@ import FeaturedByData from '../../data/featured-by.json'
 import CallToActionData from '../../data/call-to-action.json'
 import BenefitsData from '../../data/benefits.json'
 import MainCallToActionData from '../../data/main-call-to-action.json'
+import EmailOptInData from '../../data/email-opt-in.json'
 
 import EmailOptIn from '../EmailOptIn/EmailOptIn'
 import FreePassButton from '../FreePassButton/FreePassButton'
+
 import './Registration.styl'
 
 class Registration extends Component {
@@ -45,12 +47,27 @@ class Registration extends Component {
   render() {
     return (
       <div className="registration">
-        {this.state.emailOptIn ? <EmailOptIn type='addMember' closeEmailOptIn={this.closeEmailOptIn}/> : ''}
-        <NavBar data={NavBarData[0]} openEmailOptIn={this.openEmailOptIn} width={this.props.width}/>
-        <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn} buttonType='addMember'/>
-        <Info data={InfoData[0]} openEmailOptIn={this.openEmailOptIn}/>
-        <Benefits data={BenefitsData[0]} />
-        <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}/>
+        {this.state.emailOptIn ? 
+          <EmailOptIn 
+            type='addMember' 
+            closeEmailOptIn={this.closeEmailOptIn} 
+            data={EmailOptInData[0]}/> : ''}
+        <NavBar 
+          data={NavBarData[0]} 
+          openEmailOptIn={this.openEmailOptIn} 
+          width={this.props.width}/>
+        <Header 
+          data={HeaderData[0]} 
+          openEmailOptIn={this.openEmailOptIn} 
+          buttonType='addMember'/>
+        <Info 
+          data={InfoData[0]} 
+          openEmailOptIn={this.openEmailOptIn}/>
+        <Benefits 
+          data={BenefitsData[0]} />
+        <CallToAction 
+          data={CallToActionData[0]} 
+          openEmailOptIn={this.openEmailOptIn}/>
       </div>
     );
   }

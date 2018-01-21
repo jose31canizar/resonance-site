@@ -110,18 +110,18 @@ class EmailOptIn extends Component {
     document.body.style.position = 'fixed';
   }
   render() {
-    console.log(this.props.type)
+    const { title, statement, buttonText } = this.props.data
     return (
       <div className="email-opt-in" onClick={this.props.closeEmailOptIn}>
         <div className="registration-block" onClick={this.handleClose}>
-          <h2>Resonate with us.</h2>
-          <h3>Be the first to get exclusive access to the Resonance app.</h3>
+          <h2>{title}</h2>
+          <h3>{statement}</h3>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} onKeyPress={this.handleKeyPress}/>
             <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} onKeyPress={this.handleKeyPress}/>
             {this.state.warning ? <p className='warning'>{this.state.warning}</p> : <p>&nbsp;</p>}
             <div className='submit-button-container' onMouseDown={this.handleSubmit}>
-              <Link to={this.state.navigate} className='submit-button'>Sign me up!</Link>
+              <Link to={this.state.navigate} className='submit-button'>{buttonText}</Link>
             </div>
           </form>
         </div>

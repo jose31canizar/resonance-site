@@ -69,7 +69,10 @@ class Login extends Component {
     const { type } = this.props
     return (
       <div className="login">
-        <h2>Resonance Site {type === 'login' ? 'Login' : 'Sign Up'}</h2>
+        <div className='login-header'>
+          <h2>Resonance Site {type === 'login' ? 'Login' : 'Sign Up'}</h2>
+          <p>{type === 'login' ? 'log in' : 'sign up'} to {type === 'login' ? 'to view the Resonance beta page' : 'to become a Resonance beta tester'}</p>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} onKeyPress={this.handleKeyPress}/>
           <input placeholder="password" type={this.state.mask ? 'password' : 'text'} value={this.state.password} onChange={this.handlePassword} onKeyPress={this.handleKeyPress}/>

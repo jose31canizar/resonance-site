@@ -8,6 +8,7 @@ import FreePassButton from '../FreePassButton/FreePassButton'
 import HeaderData from '../../data/beta/header.json'
 import NavBarData from '../../data/beta/navbar.json'
 import CallToActionData from '../../data/beta/call-to-action.json'
+import EmailOptInData from '../../data/beta/email-opt-in.json'
 
 import './Beta.styl'
 
@@ -33,10 +34,23 @@ constructor(props) {
     render() {
         return (
             <div className="beta">
-                {this.state.emailOptIn ? <EmailOptIn type='signUpForBeta' closeEmailOptIn={this.closeEmailOptIn}/> : ''}
-                <NavBar data={NavBarData[0]} openEmailOptIn={this.openEmailOptIn} width={this.props.width}/>
-                <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn} buttonType='beta'/>
-                <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}  buttonType='beta'/>
+                {this.state.emailOptIn ? 
+                <EmailOptIn 
+                  type='signUpForBeta' 
+                  closeEmailOptIn={this.closeEmailOptIn} 
+                  data={EmailOptInData[0]}/> : ''}
+                <NavBar 
+                  data={NavBarData[0]} 
+                  openEmailOptIn={this.openEmailOptIn} 
+                  width={this.props.width}/>
+                <Header 
+                  data={HeaderData[0]} 
+                  openEmailOptIn={this.openEmailOptIn} 
+                  buttonType='beta'/>
+                <CallToAction 
+                  data={CallToActionData[0]} 
+                  openEmailOptIn={this.openEmailOptIn}  
+                  buttonType='beta'/>
             </div>
         );
     }

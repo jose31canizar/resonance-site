@@ -58,8 +58,10 @@ class NavBar extends Component {
         <Parallax className='nav-bar-background' src={require('../../img/background_2.jpg')} />
         <div className={'nav-bar' + (this.state.flip ? ' flip' : '')}>
           <div className='nav-bar-header'>
-            <img className='icon' src={require('../../img/resonance_logo_icon.png')} />
-            <h1>resonance</h1>
+            <Link className='icon-container' to='/'>
+              <h1>resonance</h1>
+              <img className='icon' src={require('../../img/resonance_logo_icon.png')} />
+            </Link>
           </div>
           <h3>{slogan}</h3>
           <p className='statement'><Link to='beta'>{statement}</Link></p>
