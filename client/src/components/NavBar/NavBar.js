@@ -52,6 +52,8 @@ class NavBar extends Component {
     })
   }
   render() {
+    console.log(this.props)
+    const { slogan, statement } = this.props.data
     return (
       <div className='nav-bar-wrapper'>
         <Parallax className='nav-bar-background' src={require('../../img/background_2.jpg')} />
@@ -60,7 +62,12 @@ class NavBar extends Component {
             <img className='icon' src={require('../../img/resonance_logo_icon.png')} />
             <h1>resonance</h1>
           </div>
-          <h1>Connect. Experience. Discover.</h1>
+          <h3>{slogan}</h3>
+          <p><Link to='beta'>{statement}</Link></p>
+          <div className='account-actions'>
+            <Link to='login'>Login</Link>
+            <Link to='signup'>Sign up</Link>
+          </div>
         </div>
       </div>
     );

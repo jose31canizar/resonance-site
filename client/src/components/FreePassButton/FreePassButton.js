@@ -3,7 +3,6 @@ import './FreePassButton.styl'
 
 class FreePassButton extends Component {
   render() {
-    console.log(this.props.white);
     const type = this.props.white ? 'free-pass-button-white' : 'free-pass-button'
     return (
       <div className={type} onMouseDown={this.props.openEmailOptIn}>

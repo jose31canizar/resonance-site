@@ -28,7 +28,7 @@ theme-color = #79737d
     flex-direction: column
     border-radius: 0
     @media all and (max-width: 700px)
-      width: 100%
+      width: 75%
       padding: 20px 0
       border-radius: 0
     h2
@@ -37,8 +37,8 @@ theme-color = #79737d
       cursor: default
       @media all and (max-width: 700px)
         padding: 0
-        padding-bottom: 10px
-        font-size: 2.4em
+        padding-bottom: 40px
+        font-size: 2em
         width: 75%
     h3
       font-weight: 100
@@ -47,15 +47,18 @@ theme-color = #79737d
       padding-bottom: 25px
       cursor: default
       @media all and (max-width: 700px)
-        padding: 0 10px
+        padding: 0 20px
+        padding-bottom: 40px
         font-size: 1.7em
-        width: 60%
+        width: 75%
     form
       width: 90%
       display: flex
       justify-content: center
       align-items: center
       flex-direction: column
+      .warning
+        padding: 0 10px
       input
         border-radius: 0
         width: 100%
@@ -64,8 +67,11 @@ theme-color = #79737d
         outline: none
         background: transparent
         font-size: 2.5em
+        font-weight: 600
+        font-family: 'Avenir', Futura, Helvetica, sans-serif
         border-bottom: 0.5pt solid theme-color
-        -webkit-text-fill-color: theme-color
+        /* -webkit-text-fill-color: theme-color */
+        color: button-border-color
         caret-color: theme-color
         padding-bottom: 10px
         text-transform: lowercase
@@ -73,7 +79,8 @@ theme-color = #79737d
         @media all and (max-width: 700px)
           margin-top: 10px
           padding: 15px 5px
-      input[type=submit]
+          font-size: 1.5em
+      .submit-button
         user-select: none
         cursor: pointer
         border: 2pt solid button-border-color
@@ -81,7 +88,8 @@ theme-color = #79737d
         -webkit-text-fill-color: button-border-color
         transition: opacity 0.3s, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         /*box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16)*/
-        padding: 20px 0
+        padding: 20px
+        margin: 20px 0
         box-sizing: border-box
         -webkit-appearance: none
         text-align: center
@@ -91,7 +99,11 @@ theme-color = #79737d
         @media all and (max-width: 700px)
           white-space: pre-line
           font-size: 2em
-      input[type=submit]:hover
+      .submit-button:hover
         background: button-hover-color
         border-color: button-hover-color
         -webkit-text-fill-color: white
+      .submit-button-container
+        padding: 20px
+        margin: 10px
+        margin-bottom: 0

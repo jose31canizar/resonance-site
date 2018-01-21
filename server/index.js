@@ -42,8 +42,7 @@ app.post('/api/addMember', (req, res) => {
         "email_address": req.body.email_address,
         "status": "subscribed",
         "merge_fields": {
-          'FNAME': req.body.merge_fields.firstName,
-          'LNAME': req.body.merge_fields.lastName
+          'FNAME': req.body.merge_fields.name
         }
       }
     ], "update_existing": true})

@@ -4,46 +4,6 @@ import ScrollReveal from '../ScrollReveal/ScrollReveal'
 import './Header.styl'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      width: 720
-    }
-
-  }
-  componentDidMount() {
-    const w = Math.max(document.body.clientWidth, window.innerWidth || 0)
-    if (w < 700) {
-      this.setState({
-        width: 280
-      })
-    } else if(w < 1200) {
-      this.setState({
-        width: 600
-      })
-    } else {
-      this.setState({
-        width: 720
-      })
-    }
-    window.addEventListener('resize', () => {
-      const w = Math.max(document.body.clientWidth, window.innerWidth || 0)
-      //iphone 5 - 6
-      if (w < 700) {
-        this.setState({
-          width: 280
-        })
-      } else if(w < 1200) {
-        this.setState({
-          width: 600
-        })
-      } else {
-        this.setState({
-          width: 720
-        })
-      }
-    })
-  }
   render() {
     return (
       <div className="header">

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "nodemon": "./node_modules/nodemon/bin/nodemon.js server",
+    "rerun": "rm -rf build && cd client && nb && cp -r build .. && cd .. && nn"
   },
   "proxy": "http://localhost:5001",
   "dependencies": {
@@ -13,6 +15,7 @@
     "express": "~4.15.2",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
+    "nodemon": "^1.14.11",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {

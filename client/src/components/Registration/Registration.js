@@ -10,6 +10,7 @@ import Benefits from '../Benefits/Benefits'
 import MainCallToAction from '../MainCallToAction/MainCallToAction'
 
 import HeaderData from '../../data/header.json'
+import NavBarData from '../../data/navbar.json'
 import InfoData from '../../data/info.json'
 import SpeakerIntroData from '../../data/speaker-intro.json'
 import ArtistsData from '../../data/artists.json'
@@ -17,6 +18,7 @@ import FeaturedByData from '../../data/featured-by.json'
 import CallToActionData from '../../data/call-to-action.json'
 import BenefitsData from '../../data/benefits.json'
 import MainCallToActionData from '../../data/main-call-to-action.json'
+
 import EmailOptIn from '../EmailOptIn/EmailOptIn'
 import FreePassButton from '../FreePassButton/FreePassButton'
 import './Registration.styl'
@@ -43,8 +45,8 @@ class Registration extends Component {
   render() {
     return (
       <div className="registration">
-        {this.state.emailOptIn ? <EmailOptIn closeEmailOptIn={this.closeEmailOptIn}/> : ''}
-        <NavBar openEmailOptIn={this.openEmailOptIn}/>
+        {this.state.emailOptIn ? <EmailOptIn type='addMember' closeEmailOptIn={this.closeEmailOptIn}/> : ''}
+        <NavBar data={NavBarData[0]} openEmailOptIn={this.openEmailOptIn} width={this.props.width}/>
         <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn}/>
         <Info data={InfoData[0]} openEmailOptIn={this.openEmailOptIn}/>
         <Benefits data={BenefitsData[0]} />

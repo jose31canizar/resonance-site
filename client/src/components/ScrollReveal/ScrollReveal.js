@@ -14,13 +14,6 @@ export default class Info extends Component {
     let { isHidden } = this.state
     var rect = document.getElementById(this.props.id).getBoundingClientRect();
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    // var bottomOfViewport = window.pageYOffset + h
-    console.log('rect.top');
-    console.log(rect.top);
-    console.log('h');
-    console.log(h);
-    console.log('state');
-    console.log(this.state.show);
 
     if( rect.top < h) {
       this.setState({ show: true});

@@ -8,7 +8,9 @@ class EmailOptIn extends Component {
     this.state = {
       name: '',
       email: '',
-      yOffset: 0
+      warning: '',
+      yOffset: 0,
+      navigate: ''
     }
     this.handleName = this.handleName.bind(this)
     this.handleEmail = this.handleEmail.bind(this)
@@ -22,15 +24,52 @@ class EmailOptIn extends Component {
     this.setState({email: event.target.value});
   }
   handleSubmit(event) {
-    console.log('A name was submitted: ' + this.state.email + this.state.name)
-    this.addMember()
     event.preventDefault()
-    setTimeout(function(){window.location.href='/thankyou'} , 2000);
-    // this.context.router.transitionTo('https://localhost:9001/thankyou')
+    console.log('A name was submitted: ' + this.state.email + this.state.name)
+    if(this.state.email && this.state.name) {
+      this.setState({ navigate: '/thankyou' }, () => {
+        this.addMember()
+      })
+    } else if(this.state.email) {
+      this.setState({
+        warning: "Please enter your first name."
+      })
+    } else if (this.state.name) {
+      this.setState({
+        warning: "Please enter your email."
+      })
+    } else {
+      this.setState({
+        warning: "Please enter your info."
+      })
+    }
     return false
   }
+  handleKeyPress = (event) => {
+    if(event.key == 'Enter'){
+      event.preventDefault()
+      if(this.state.email && this.state.name) {
+        this.setState({ navigate: '/thankyou' }, () => {
+          this.addMember()
+        })
+      } else if(this.state.email) {
+        this.setState({
+          warning: "Please enter your first name."
+        })
+      } else if (this.state.name) {
+        this.setState({
+          warning: "Please enter your email."
+        })
+      } else {
+        this.setState({
+          warning: "Please enter your info."
+        })
+      }
+    }
+  }
   addMember = () => {
-    fetch('/api/addMember', {
+    console.log('adding member')
+    fetch(`/api/${this.props.type}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -45,7 +84,7 @@ class EmailOptIn extends Component {
       })
     })
     .then(function(res){
-      console.log(res)
+      window.location.replace('/thankyou'); //only needed for case of keypress
     })
     .catch(function(res){
       console.log(res)
@@ -76,9 +115,12 @@ class EmailOptIn extends Component {
           <h2>Resonate with us.</h2>
           <h3>Be the first to get exclusive access to the Resonance app.</h3>
           <form onSubmit={this.handleSubmit}>
-            <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} />
-            <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} />
-            <input type="submit" value="Sign me up!" />
+            <input placeholder="first name" type="text" value={this.state.name} onChange={this.handleName} onKeyPress={this.handleKeyPress}/>
+            <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} onKeyPress={this.handleKeyPress}/>
+            {this.state.warning ? <p className='warning'>{this.state.warning}</p> : <p>&nbsp;</p>}
+            <div className='submit-button-container' onMouseDown={this.handleSubmit}>
+              <Link to={this.state.navigate} className='submit-button'>Sign me up!</Link>
+            </div>
           </form>
         </div>
       </div>
