@@ -10,7 +10,7 @@ class EmailOptIn extends Component {
       email: '',
       warning: '',
       yOffset: 0,
-      navigate: ''
+      navigate: this.props.type === 'addMember' ? '' : '/beta'
     }
     this.handleName = this.handleName.bind(this)
     this.handleEmail = this.handleEmail.bind(this)
@@ -25,9 +25,8 @@ class EmailOptIn extends Component {
   }
   handleSubmit(event) {
     event.preventDefault()
-    console.log('A name was submitted: ' + this.state.email + this.state.name)
     if(this.state.email && this.state.name) {
-      this.setState({ navigate: '/thankyou' }, () => {
+      this.setState({ navigate: this.props.type === 'addMember' ? '/thankyou' : '/thankyoubeta' }, () => {
         this.addMember()
       })
     } else if(this.state.email) {
@@ -49,7 +48,8 @@ class EmailOptIn extends Component {
     if(event.key == 'Enter'){
       event.preventDefault()
       if(this.state.email && this.state.name) {
-        this.setState({ navigate: '/thankyou' }, () => {
+        const type = this.props.type === 'addMember' ? '/thankyou' : '/thankyoubeta'
+        this.setState({ navigate: type }, () => {
           this.addMember()
         })
       } else if(this.state.email) {
@@ -84,7 +84,8 @@ class EmailOptIn extends Component {
       })
     })
     .then(function(res){
-      window.location.replace('/thankyou'); //only needed for case of keypress
+      const type = this.props.type === 'addMember' ? '/thankyou' : '/thankyoubeta'
+      window.location.replace(`http://resonator.life${type}`); //only needed for case of keypress
     })
     .catch(function(res){
       console.log(res)
@@ -109,6 +110,7 @@ class EmailOptIn extends Component {
     document.body.style.position = 'fixed';
   }
   render() {
+    console.log(this.props.type)
     return (
       <div className="email-opt-in" onClick={this.props.closeEmailOptIn}>
         <div className="registration-block" onClick={this.handleClose}>

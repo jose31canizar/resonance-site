@@ -3,9 +3,10 @@ import './ThankYou.styl'
 
 class ThankYou extends Component {
   render() {
+    const { text } = this.props
     return (
         <div className="thank-you">
-          <h1>Thanks for joining Resonance. We'll email you about upcoming features.</h1>
+          <h1>{text}</h1>
         </div>
     );
   }

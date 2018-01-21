@@ -5,6 +5,7 @@ import './Header.styl'
 
 class Header extends Component {
   render() {
+    const { buttonType } = this.props
     return (
       <div className="header">
         <div className='headline'>
@@ -24,7 +25,7 @@ class Header extends Component {
         </div>
         <ScrollReveal id='reveal-header'>
           <h2 className='ticket-text'>Grab your VIP access to the Resonance Release</h2>
-          <FreePassButton openEmailOptIn={this.props.openEmailOptIn} white/>
+          <FreePassButton buttonType={buttonType} openEmailOptIn={this.props.openEmailOptIn} white/>
         </ScrollReveal>
       </div>
     );

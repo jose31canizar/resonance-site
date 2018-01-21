@@ -33,10 +33,10 @@ constructor(props) {
     render() {
         return (
             <div className="beta">
-                {this.state.emailOptIn ? <EmailOptIn type={'signUpForBeta'} closeEmailOptIn={this.closeEmailOptIn}/> : ''}
+                {this.state.emailOptIn ? <EmailOptIn type='signUpForBeta' closeEmailOptIn={this.closeEmailOptIn}/> : ''}
                 <NavBar data={NavBarData[0]} openEmailOptIn={this.openEmailOptIn} width={this.props.width}/>
-                <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn}/>
-                <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}/>
+                <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn} buttonType='beta'/>
+                <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}  buttonType='beta'/>
             </div>
         );
     }

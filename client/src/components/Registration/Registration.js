@@ -47,7 +47,7 @@ class Registration extends Component {
       <div className="registration">
         {this.state.emailOptIn ? <EmailOptIn type='addMember' closeEmailOptIn={this.closeEmailOptIn}/> : ''}
         <NavBar data={NavBarData[0]} openEmailOptIn={this.openEmailOptIn} width={this.props.width}/>
-        <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn}/>
+        <Header data={HeaderData[0]} openEmailOptIn={this.openEmailOptIn} buttonType='addMember'/>
         <Info data={InfoData[0]} openEmailOptIn={this.openEmailOptIn}/>
         <Benefits data={BenefitsData[0]} />
         <CallToAction data={CallToActionData[0]} openEmailOptIn={this.openEmailOptIn}/>
