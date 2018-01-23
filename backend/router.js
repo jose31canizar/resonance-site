@@ -35,7 +35,7 @@ router.post('/login', function (req, res, next) {
     } else {
       req.session.userId = user._id;
       // console.log('there was no error')
-      res.send(user)
+      res.send({message: 'successful login'})
     }
   });
 });
@@ -47,7 +47,7 @@ router.get('/logout', function(req, res, next) {
       if(err) {
         return next(err);
       } else {
-        return res.send({loggedOut: true});
+        return res.send({message: 'successful logout'});
       }
     });
   }

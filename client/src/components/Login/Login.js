@@ -5,6 +5,19 @@ import './Login.styl'
 import { Link } from 'react-router-dom'
 import { debounce } from 'lodash'
 
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+  return { loggedIn: state.loggedIn };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onLogin: () => dispatch({type: 'LOGIN_USER'}),
+    onLogout: () => dispatch({type: 'LOGOUT_USER'})
+  };
+};
+
 class Login extends Component {
   constructor(props) {
     super(props)
@@ -17,7 +30,6 @@ class Login extends Component {
         warning: '',
         mask: true
     }
-    // this.handleKeyPress = debounce(this.handleKeyPress.bind(this), 500);
     this.handleInput = this.handleInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.toggleMask = this.toggleMask.bind(this)
@@ -95,11 +107,16 @@ class Login extends Component {
         });
       } else if(res.message === 'success') {
         this.setState({
-          warning: "You've signed in!"
+          warning: "You've signed up!"
+        }, () => {
+          window.location = `http://localhost:9001/login`;
         });
-        setTimeout(() => {
-          window.location = `http://localhost:9001/beta`;
-        }, 1000);
+      } else if(res.message === 'successful login') {
+        this.setState({
+          warning: "You've signed in!"
+        }, () => {
+          this.props.login();
+        });
       }
     }, function(err){
       console.log(err);
@@ -111,8 +128,14 @@ class Login extends Component {
     })
   }
   render() {
+    console.log('from login.js')
+    console.log(this.props.loggedIn)
     const { type } = this.props
     const Fragment = React.Fragment;
+    if(this.props.loggedIn) {
+      // window.location = `http://localhost:9001/beta`;
+      window.history.replaceState( {} , 'resonance beta', 'http://localhost:9001/beta' );
+    }
     return (
       <div className="login">
         <div className='login-header'>
@@ -122,8 +145,8 @@ class Login extends Component {
         <form onSubmit={this.handleSubmit}>
         {type === 'login' ?
           <Fragment>
-            <input placeholder="email" type="text" value={this.state.email} onChange={this.handleEmail} onKeyPress={this.handleKeyPress}/>
-            <input placeholder="password" type={this.state.mask ? 'password' : 'text'} value={this.state.password} onChange={this.handlePassword} onKeyPress={this.handleKeyPress}/>
+            <input placeholder="email" type="text" value={this.state.email} onChange={(e) => this.handleInput(e, 'email')}/>
+            <input placeholder="password" type={this.state.mask ? 'password' : 'text'} value={this.state.password} onChange={(e) => this.handleInput(e, 'password')}/>
           </Fragment>
           :
           <Fragment>
@@ -150,4 +173,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

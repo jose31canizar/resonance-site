@@ -6,6 +6,19 @@ import './NavBar.styl'
 import FreePassButton from '../FreePassButton/FreePassButton'
 import Parallax from '../Parallax/Parallax'
 
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+  return { loggedIn: state.loggedIn };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onLogin: () => dispatch({type: 'LOGIN_USER'}),
+    onLogout: () => dispatch({type: 'LOGOUT_USER'})
+  };
+};
+
 class NavBar extends Component {
   constructor(props) {
     super(props)
@@ -17,6 +30,7 @@ class NavBar extends Component {
     }
     this.setSelected = this.setSelected.bind(this)
     this.flip = this.flip.bind(this)
+    this.logout = this.logout.bind(this)
   }
   componentDidMount() {
     // document.addEventListener('scroll', this.flip)
@@ -51,6 +65,21 @@ class NavBar extends Component {
       currentScrollTop: document.body.scrollTop
     })
   }
+  logout() {
+    fetch(`/account/logout`)
+    .then(res => {
+      return res.json();
+    })
+    .then((res) => {
+      console.log('result')
+      console.log(res)
+      if(res.message === 'successful logout') {
+        this.props.onLogout()
+      } 
+    }, function(err){
+      console.log(err);
+    });
+  }
   render() {
     const { slogan, statement } = this.props.data
     return (
@@ -65,14 +94,22 @@ class NavBar extends Component {
           </div>
           <h3>{slogan}</h3>
           <p className='statement'><Link to='beta'>{statement}</Link></p>
-          <div className='account-actions'>
+          {
+            this.props.loggedIn ? 
+            <div className='account-actions'>
+            <p className='logout-button' onMouseDown={this.logout}>logout</p>
+          </div>
+            :
+            <div className='account-actions'>
             <Link to='login'>Login</Link>
             <Link to='signup'>Sign up</Link>
           </div>
+          }
+          
         </div>
       </div>
     );
   }
 }
 
-export default NavBar;
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

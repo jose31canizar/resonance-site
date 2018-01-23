@@ -68,15 +68,15 @@ userSchema.statics.authenticate = function (email, password, callback) {
         err.status = 401;
         return callback(err);
       }
-    //   bcrypt.compare(password, user.password, function (err, result) {
-    //     if (result === true) {
-    //       return callback(null, user);
-    //     } else {
-    //       return callback();
-    //     }
-    //   })
+      bcrypt.compare(password, user.password, function (err, result) {
+        if (result === true) {
+          return callback(null, user);
+        } else {
+          return callback();
+        }
+      })
       
-      return callback();
+      // return callback();
     });
 }
 

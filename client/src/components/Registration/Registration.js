@@ -55,7 +55,9 @@ class Registration extends Component {
         <NavBar 
           data={NavBarData[0]} 
           openEmailOptIn={this.openEmailOptIn} 
-          width={this.props.width}/>
+          width={this.props.width} 
+          loggedIn={this.props.loggedIn} 
+          logout={this.props.logout}/>
         <Header 
           data={HeaderData[0]} 
           openEmailOptIn={this.openEmailOptIn} 
