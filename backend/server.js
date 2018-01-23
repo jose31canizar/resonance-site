@@ -17,7 +17,8 @@ fs.readdirSync(__dirname + '/models').forEach(function(filename) {
   if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
 })
 
-mongoose.connect('mongodb://Jose:Tidalwaves@ds111138.mlab.com:11138/resonance');
+// mongoose.connect('mongodb://Jose:Tidalwaves@ds111138.mlab.com:11138/resonance-site');
+mongoose.connect('mongodb://localhost/resonance-site');
 const db = mongoose.connection;
 
 const app = express();
@@ -105,7 +106,13 @@ app.post('/api/signUpForBeta', (req, res) => {
   });
 });
 
-app.use('/v1', router);
+// app.use(function (req, res, next) {
+//   var err = new Error('File Not Found');
+//   err.status = 404;
+//   next(err);
+// });
+
+app.use('/account', router);
 
 
 //catch all handler

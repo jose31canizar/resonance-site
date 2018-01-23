@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "nodemon": "./node_modules/nodemon/bin/nodemon.js server.js --exec babel-node --presets es2015,stage-2",
-    "rerun":"cd .. && rm -rf build && cd client && npm run build && cp -r build .. && cd .. && cd backend && npm run nodemon"
+    "rerun": "cd .. && rm -rf build && cd client && npm run build && cp -r build .. && cd .. && cd backend && npm run nodemon"
   },
   "proxy": "http://localhost:9001",
   "dependencies": {

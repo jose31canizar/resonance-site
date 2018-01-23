@@ -85,7 +85,9 @@ class EmailOptIn extends Component {
     })
     .then(function(res){
       const type = this.props.type === 'addMember' ? '/thankyou' : '/thankyoubeta'
-      window.location.replace(`http://resonator.life${type}`); //only needed for case of keypress
+      // window.location.replace(`http://resonator.life${type}`); //only needed for case of keypress
+      // window.location = `http://resonator.life${type}`;
+      window.location = `http://resonator.life${type}`;
     })
     .catch(function(res){
       console.log(res)

@@ -13,16 +13,26 @@ theme-color = #79737d
   justify-content: center
   align-items: center
   .login-header
+    animation: reveal 1s
     padding: 50px
     padding-top: 120px
+    @media all and (max-width: 1200px)
+      padding-top: 0
     box-sizing: border-box
     display: flex
     justify-content: center
     flex-direction: column
+    h2 
+      white-space: nowrap
+      @media all and (max-width: 1200px)
+        white-space: pre-line
   form
+    animation: reveal 1s
     display: flex
     flex-direction: column
     padding: 100px
+    @media all and (max-width: 700px)
+      padding: 0 70px
   input
     border-radius: 0
     width: 100%
@@ -30,7 +40,7 @@ theme-color = #79737d
     border: none
     outline: none
     background: white
-    font-size: 2em
+    font-size: 1.7em
     font-weight: 600
     font-family: 'Avenir', Futura, Helvetica, sans-serif
     border-bottom: 0.5pt solid theme-color
@@ -38,11 +48,13 @@ theme-color = #79737d
     color: black
     caret-color: theme-color
     padding: 10px 5px 
-    margin: 10px 0
+    margin: 5px 0
     text-transform: lowercase
+    border-radius: 4px
     @media all and (max-width: 700px)
       padding: 15px 5px
       font-size: 1.5em
+      margin: 10px 0
   .submit-button
     user-select: none
     cursor: pointer
@@ -61,7 +73,7 @@ theme-color = #79737d
     font-family: Gotham
     font-weight: 900
     @media all and (max-width: 700px)
-      white-space: pre-line
+      white-space: nowrap
       font-size: 2em
   .submit-button:hover
     background: button-hover-color
@@ -73,6 +85,10 @@ theme-color = #79737d
   .mask-button
     display: flex
     justify-content: flex-end
+    @media all and (max-width: 700px)
+      margin: 20px 0
   .mask-button:hover
     color: #fbbb81
     cursor: pointer
+  .sub-text
+    margin: 20px 0
