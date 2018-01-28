@@ -68,7 +68,6 @@ class EmailOptIn extends Component {
     }
   }
   addMember = () => {
-    console.log('adding member')
     fetch(`/api/${this.props.type}`, {
       method: 'POST',
       headers: {

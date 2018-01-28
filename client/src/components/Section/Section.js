@@ -4,7 +4,6 @@ import './Section.styl'
 
 class Section extends Component {
   render() {
-    console.log(this.props.wallpaper);
     return (
       <div className='section'>
         <div className='section-title'>

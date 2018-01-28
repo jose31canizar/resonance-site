@@ -17,8 +17,8 @@ fs.readdirSync(__dirname + '/models').forEach(function(filename) {
   if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
 })
 
-// mongoose.connect('mongodb://Jose:Tidalwaves@ds111138.mlab.com:11138/resonance-site');
-mongoose.connect('mongodb://localhost/resonance-site');
+mongoose.connect('mongodb://Jose:Tidalwaves@ds111638.mlab.com:11638/resonance-site');
+// mongoose.connect('mongodb://localhost/resonance-site');
 const db = mongoose.connection;
 
 const app = express();
@@ -76,7 +76,7 @@ app.post('/api/addMember', (req, res) => {
       }
     ], "update_existing": true})
   .then(function(results){
-    console.log(results)
+    // console.log(results)
   })
   .catch(function(err){
     console.log(err);
@@ -85,7 +85,6 @@ app.post('/api/addMember', (req, res) => {
 });
 
 app.post('/api/signUpForBeta', (req, res) => {
-  console.log('signing up for beta')
   mailchimp.post(`/lists/${beta_list_id}`, {"members":
     [
       {
@@ -97,8 +96,8 @@ app.post('/api/signUpForBeta', (req, res) => {
       }
     ], "update_existing": true})
   .then(function(results){
-    console.log(results)
-    console.log('signing up for beta')
+    // console.log(results)
+    // console.log('signing up for beta')
   })
   .catch(function(err){
     console.log(err);
