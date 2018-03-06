@@ -61,10 +61,22 @@ nav-bar-text-color = white
       @media all and (max-width: 1200px)
         font-size: 9pt
         padding: 18px 23px
-  .slogan
+  .nav-items
     white-space: nowrap
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    a
+      font-size: 0.5em
+      transition: 0.3s ease-in-out
+      padding: 5px 15px
+    a:hover
+      background: white
+      color: black
     @media all and (max-width: 1200px)
       white-space: pre-line
+      flex-direction: column
+      width: 100%
   h1
   h2
   h3

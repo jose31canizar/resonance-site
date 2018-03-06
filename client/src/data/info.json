@@ -2,45 +2,39 @@
   {
     "title":"About Resonance",
     "description": {
-        "title":"Hello, ResoNation.",
+        "title":"Hello, Resonators.",
         "reasons": [
-            "• Connect with a community of music lovers.",
-            "• Learn about upcoming live events instantly.",
-            "• Discover your new favorite artists."
+            "Here's what we think the future of music sharing looks like."
         ],
         "subtitle":"Features"
       },
     "topics": [
       {
+        "image":"headphones_logo",
+        "title":"Personalize",
+        "facts": [
+          "• Create a personalized profile that reflects your taste in music."
+        ]
+      },
+      {
         "image":"chat",
         "title":"Connect",
         "facts": [
-          "• Connect with other resonators and artists that you love.",
-          "• Become a part of the live music community!"
+          "• Follow others and discover music with them."
         ]
       },
       {
-        "image":"headphones_logo",
-        "title":"Experience",
+        "image":"music-player",
+        "title":"Song of The Week",
         "facts": [
-          "• Share your concert experiences with your friends.",
-          "• Know which concerts you'll vibe with before you even buy a ticket."
+          "• Post your 'song of the week', the song you're vibing with the most and want to represent your profile for the week."
         ]
       },
       {
-        "image":"planet-earth",
-        "title":"Discover",
+        "image":"levels_logo",
+        "title":"Gamification",
         "facts": [
-          "• Discover upcoming concerts near you.",
-          "• Find events with audiences you'll vibe with."
-        ]
-      },
-      {
-        "image":"config_logo",
-        "title":"Configurability",
-        "facts": [
-          "• Our app's seamless interface make connecting with others a breeze.",
-          "• Customize, configure, and tailor according to your preferences."
+          "• Rank up on the gamified platform by showing others your know your music."
         ]
       }
     ],

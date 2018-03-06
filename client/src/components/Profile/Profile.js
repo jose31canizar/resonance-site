@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import CallToAction from "../CallToAction/CallToAction";
 import NavBar from "../NavBar/NavBar";
-import ReactSpinner from 'react-spinjs';
-import NavBarData from "../../data/beta/navbar.json";
+import ReactSpinner from "react-spinjs";
+import NavBarData from "../../data/navbar.json";
 
 import "./Profile.styl";
 
@@ -38,21 +38,28 @@ class Profile extends Component {
     this.state = {};
   }
   componentDidMount() {
-    console.log('id')
-    console.log(this.props.id)
+    console.log("id");
+    console.log(this.props.id);
 
-    if(this.props.id) {
+    if (this.props.id) {
       this.props.loadUserData(this.props.id);
       this.props.loadPostData(this.props.id);
     }
   }
   render() {
-    const { email, username, firstName, lastName, posts, favorite_bands } = this.props;
+    const {
+      email,
+      username,
+      firstName,
+      lastName,
+      posts,
+      favorite_bands
+    } = this.props;
     return (
       <div className="profile">
         <NavBar
           data={NavBarData[0]}
-          openEmailOptIn={this.openEmailOptIn}
+          openSignUpForm={this.openSignUpForm}
           width={this.props.width}
           loggedIn={this.props.loggedIn}
           logout={this.props.logout}
@@ -65,47 +72,52 @@ class Profile extends Component {
             <p>email: {email}</p>
             <p>@{username}</p>
             <div className="favorite-bands">
-            {favorite_bands ?
-              favorite_bands.map((band, i) => (
-                <p className="band">{band}</p>
-              )) : <ReactSpinner/>
-            }
+              {favorite_bands ? (
+                favorite_bands.map((band, i) => <p className="band">{band}</p>)
+              ) : (
+                <ReactSpinner />
+              )}
             </div>
           </div>
           <div className="profile-posts">
-            {posts ?
+            {posts ? (
               posts.map((post, i) => (
-              <div className="post">
-                <div className="top-bar">
-                  <div className="profile-image" />
-                  <p className="name">{firstName} {lastName}</p>
-                  <SVG name="TripleDot" />
-                </div>
-                <div className="song-image" />
-                <div className="song-info">
-                  <h2>{post.title}</h2>
-                  <h2>{post.artist}</h2>
-                  <h3>{post.album}</h3>
-                  <p className="source">Listen from {post.source}</p>
-                </div>
-                <p className="caption">{post.caption}</p>
-                <div className="action-bar">
-                  <div>
-                    <SVG name="Like" />
-                    <p>{post.likes ? post.likes : '0'}</p>
+                <div className="post">
+                  <div className="top-bar">
+                    <div className="profile-image" />
+                    <p className="name">
+                      {firstName} {lastName}
+                    </p>
+                    <SVG name="TripleDot" />
                   </div>
-                  <div>
-                    <SVG name="Repost" />
-                    <p>{post.reposts ? post.reposts : '0'}</p>
+                  <div className="song-image" />
+                  <div className="song-info">
+                    <h2>{post.title}</h2>
+                    <h2>{post.artist}</h2>
+                    <h3>{post.album}</h3>
+                    <p className="source">Listen from {post.source}</p>
                   </div>
-                  <div>
-                    <a href={post.link}>
-                      <SVG name="Navigate" />
-                    </a>
+                  <p className="caption">{post.caption}</p>
+                  <div className="action-bar">
+                    <div>
+                      <SVG name="Like" />
+                      <p>{post.likes ? post.likes : "0"}</p>
+                    </div>
+                    <div>
+                      <SVG name="Repost" />
+                      <p>{post.reposts ? post.reposts : "0"}</p>
+                    </div>
+                    <div>
+                      <a href={post.link}>
+                        <SVG name="Navigate" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )) : <ReactSpinner/>}
+              ))
+            ) : (
+              <ReactSpinner />
+            )}
           </div>
         </div>
       </div>

@@ -10,10 +10,10 @@ import { connect } from "react-redux";
 import history from "../../history";
 
 const mapStateToProps = state => {
-  return { 
+  return {
     loggedIn: state.loggedIn,
     warning: state.warning
-   };
+  };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -21,14 +21,14 @@ const mapDispatchToProps = dispatch => {
     login: (email, password) =>
       dispatch({ type: "LOGIN_USER", email: email, password: password }),
     signup: (email, password, firstName, lastName, username) =>
-      dispatch({ 
-        type: "SIGNUP_USER", 
-        email: email, 
+      dispatch({
+        type: "SIGNUP_USER",
+        email: email,
         password: password,
         firstName: firstName,
         lastName: lastName,
         username: username
-    }),
+      }),
     logout: () => dispatch({ type: "LOGOUT_USER" })
   };
 };
@@ -64,7 +64,7 @@ class Login extends Component {
   }
   handleInput(event, type) {
     var state = {};
-    state[type] = event.target.value;
+    state[type] = event.target.value.trim();
     this.setState(state);
   }
   handleSubmit(event) {
@@ -91,10 +91,10 @@ class Login extends Component {
       this.props.login(this.state.email, this.state.password);
     } else {
       this.props.signup(
-        this.state.email, 
-        this.state.password, 
-        this.state.firstName, 
-        this.state.lastName, 
+        this.state.email,
+        this.state.password,
+        this.state.firstName,
+        this.state.lastName,
         this.state.username
       );
     }

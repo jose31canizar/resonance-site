@@ -1,4 +1,22 @@
 [{
-  "slogan":"Connect. Experience. Discover.",
-  "statement":"Sign up for the beta"
-  }]
+    "statement":"The Resonance Beta App is coming.",
+    "betaStatement": "Sign up for the beta",
+    "navItems": [
+      {
+        "name": "news",
+        "route": "news"
+      },
+      {
+        "name": "featured",
+        "route": "featured"
+      },
+      {
+        "name": "articles",
+        "route": "articles"
+      },
+      {
+        "name": "profile",
+        "route": "profile"
+      }
+    ]
+    }]

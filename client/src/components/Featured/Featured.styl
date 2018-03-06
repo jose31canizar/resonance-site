@@ -1,0 +1,60 @@
+.featured
+  padding-top: 10vh
+  @media all and (max-width: 1200px)
+    padding-top: 150vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #f1f1f1
+  .feature
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    box-sizing: border-box;
+    padding: 60px 5vw;
+    .feature-image
+      width: 50%
+      grid-row: 1/3
+      @media all and (max-width: 1200px)
+        width: 100%
+        grid-row: 2
+      margin: 0 auto
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        z-index: 0
+        transition: 0.5s ease-in-out
+      .hover-title
+        position: absolute
+        z-index: 1
+        font-size: 1.4em
+        color: white
+        animation: slideup 0.4s
+        @media all and (max-width: 1200px)
+          font-size: 1em
+      .show
+        display: block
+      .hide
+        display: none
+    .feature-image:hover
+      img
+        filter: brightness(40%) contrast(80%)
+    .feature-info
+      @media all and (max-width: 1200px)
+        grid-row: 1/4
+        align-items: center
+        display: flex
+        justify-content: space-around
+        flex-direction: column
+      width: 75%
+      height: 100%
+      margin: 0 auto
+      time
+        font-size: 1em
+        letter-spacing: 5px
+      p
+        padding: 20px 0
+        text-align: left
+

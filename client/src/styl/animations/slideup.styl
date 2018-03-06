@@ -1,0 +1,17 @@
+@mixin slideup($t)
+  -webkit-animation: slideup $t /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: slideup $t /* Firefox < 16 */
+  -ms-animation: slideup $t /* Internet Explorer */
+  -o-animation: slideup $t /* Opera < 12.1 */
+  animation: slideup $t
+
+@keyframes slideup {
+  0% {
+    transform: translate3d(0, 8vh,0);
+    opacity: 0
+  }
+  100% {
+    transform: translate3d(0, 0,0);
+    opacity: 1
+  }
+}

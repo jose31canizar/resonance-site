@@ -3,19 +3,19 @@
     "title":"Why Resonance?",
     "benefits": [
       {
-        "title":"First of its kind.",
-        "problem":"No other platforms provide a new community for each individual show.",
-        "solution":"Find new artists, search for upcoming concerts, and share with others who appreciate the same kind of music you do all in one app!"
+        "title":"Re-envisioning Music Discovery.",
+        "problem":"We're putting music discovery in the hands of the people listening to music,",
+        "solution":"creating a more personal experience that forms a sense of community and helps you discover a new world of music, through a gamified platform."
       },
       {
-        "title":"A discovery process that actually works.",
-        "problem":"Artist and concert suggestions don’t just take your favorite artists and genres into consideration. Our algorithm uses information from other music lovers that you Resonate with.",
-        "solution":"It’s like when your music-obsessed friend gets handed the aux cord."
+        "title":"Recognition.",
+        "problem":"People with great tastes in music will rise to the top,",
+        "solution":"making it easier to find profiles worth listening to as well as incentizing everyone in the community to work their way up to the spotlight."
       },
       {
-        "title":"The community.",
-        "problem":"See what plans people have for upcoming shows.",
-        "solution":"Stay connected with artists and music connoisseurs you meet, whether you want to meet up with them at another show or just see new music they’ve been listening to."
+        "title":"Reward.",
+        "problem":"Becoming a top resonating user will come with rewards.",
+        "solution":"Stay tuned."
       }
     ]
   }

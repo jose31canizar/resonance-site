@@ -17,17 +17,16 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: firstName =>
-      dispatch({ type: "LOGIN_USER", firstName: firstName }),
+    login: firstName => dispatch({ type: "LOGIN_USER", firstName: firstName }),
     signup: (email, password, firstName, lastName, username) =>
-      dispatch({ 
-        type: "SIGNUP_USER", 
-        email: email, 
+      dispatch({
+        type: "SIGNUP_USER",
+        email: email,
         password: password,
         firstName: firstName,
         lastName: lastName,
         username: username
-    }),
+      }),
     logout: () => dispatch({ type: "LOGOUT_USER" })
   };
 };
@@ -77,7 +76,7 @@ class NavBar extends Component {
     });
   }
   render() {
-    const { slogan, statement } = this.props.data;
+    const { statement, navItems } = this.props.data;
     return (
       <div className="nav-bar-wrapper">
         <Parallax
@@ -101,13 +100,20 @@ class NavBar extends Component {
               ""
             )}
           </div>
-          <h3 className="slogan">{slogan}</h3>
           <p className="statement">
             <Link to="beta">{statement}</Link>
           </p>
+          <h3 className="nav-items">
+            {navItems.map((navItem, i) => (
+              <Link to={navItem.route}>{navItem.name}</Link>
+            ))}
+          </h3>
           {this.props.loggedIn ? (
             <div className="account-actions">
-              <p className="logout-button" onMouseDown={() => this.props.logout()}>
+              <p
+                className="logout-button"
+                onMouseDown={() => this.props.logout()}
+              >
                 logout
               </p>
             </div>
