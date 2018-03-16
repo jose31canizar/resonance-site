@@ -1,6 +1,7 @@
-nav-bar-height = 100px
+nav-bar-height = 75vh
 nav-bar-color = white
 nav-bar-text-color = white
+
 
 .flip
   transform: rotate3d(1, 0, 0, -90deg)
@@ -25,7 +26,7 @@ nav-bar-text-color = white
   width: 100%
   position: absolute
   @media all and (max-width: 1200px)
-    height: 100vh
+    height: nav-bar-height
 .nav-bar
   top: 0
   left: 0
@@ -43,7 +44,7 @@ nav-bar-text-color = white
   height: 130px
   overflow: hidden
   @media all and (max-width: 1200px)
-    height: 100vh
+    height: nav-bar-height
     display: flex
     flex-direction: column
     justify-content: center
@@ -66,17 +67,22 @@ nav-bar-text-color = white
     display: flex
     align-items: center
     box-sizing: border-box
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     a
       font-size: 0.5em
       transition: 0.3s ease-in-out
       padding: 5px 15px
+      border-radius: 10px
+      border: 2px solid #f1f1f1;
+      margin: 10px
+      text-align: center
     a:hover
       background: white
       color: black
     @media all and (max-width: 1200px)
       white-space: pre-line
       flex-direction: column
-      width: 100%
   h1
   h2
   h3
@@ -152,7 +158,7 @@ nav-bar-text-color = white
     display: flex
     justify-content: flex-end
     align-items: center
-    height: nav-bar-height
+    height: 100px
 
     .nav-link:hover > .nav-item-above
         transform: rotate3d(1 0 0 0)

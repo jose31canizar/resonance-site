@@ -1,9 +1,16 @@
 import React, { Component } from "react";
+import "./News.styl";
+import NewsData from "../../data/news.json";
+
 export default class News extends Component {
   render() {
     return (
-      <div>
-        <h1>News</h1>
+      <div className="news">
+        {NewsData.map((newsItem, i) => (
+          <div className="news-item">
+            <p>News</p>
+          </div>
+        ))}
       </div>
     );
   }

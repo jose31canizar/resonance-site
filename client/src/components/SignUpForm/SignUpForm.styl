@@ -1,10 +1,10 @@
 button-color = #fff
 button-hover-color = #2f2e31
 button-border-color = #352626
-theme-color = #79737d
+theme-color = #4b3a56
 
 .sign-up-form
-  animation: fadein 1s
+  animation: fadein 0.2s
   a
     width: 100%
   width: 100%
@@ -17,6 +17,8 @@ theme-color = #79737d
   align-items: center
   flex-direction: column
   .registration-block
+    border-radius: 15px
+    box-shadow: 1px 0 10px 0 rgba(50,50,50,0.6)
     animation: slidein 0.5s ease-in-out
     background: white
     width: 75%
@@ -26,7 +28,6 @@ theme-color = #79737d
     justify-content: center
     align-items: center
     flex-direction: column
-    border-radius: 0
     @media all and (max-width: 700px)
       width: 75%
       padding: 20px 0
@@ -41,15 +42,17 @@ theme-color = #79737d
         font-size: 2em
         width: 75%
     h3
-      font-weight: 100
+      font-weight: 900
+      font-size: 1.7em
       text-align: center
-      color: #6A5B68
+      color: rgb(53, 48, 48)
       padding-bottom: 25px
+      width: 50%
       cursor: default
       @media all and (max-width: 700px)
         padding: 0 20px
         padding-bottom: 0
-        font-size: 1.3em
+        font-size: 0.5em
         width: auto
     form
       width: 90%
@@ -58,18 +61,22 @@ theme-color = #79737d
       align-items: center
       flex-direction: column
       .warning
+        font-size: 1.5em
+        color: rgb(53, 48, 48)
         padding: 0 10px
       input
+        font-size: 2em
+        letter-spacing: 3px
         border-radius: 0
         width: 100%
         -webkit-appearance: none
         border: none
         outline: none
         background: transparent
-        font-size: 2.5em
         font-weight: 600
         font-family: 'Avenir', Futura, Helvetica, sans-serif
-        border-bottom: 0.5pt solid theme-color
+        border-bottom: 2px solid theme-color
+        transition: 0.5s ease
         color: button-border-color
         caret-color: theme-color
         padding-bottom: 10px
@@ -78,10 +85,13 @@ theme-color = #79737d
           margin-top: 10px
           padding: 0
           font-size: 1.5em
+      input:focus
+        border-bottom: 5px solid theme-color
       .submit-button
         user-select: none
         cursor: pointer
-        border: 2pt solid button-border-color
+        border-radius: 15px
+        box-shadow: 0 0 42px -1px rgba(122, 106, 127, 0.5)
         background: button-color
         -webkit-text-fill-color: button-border-color
         transition: opacity 0.3s, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
@@ -91,12 +101,28 @@ theme-color = #79737d
         box-sizing: border-box
         -webkit-appearance: none
         text-align: center
-        font-size: 2em
-        font-family: Gotham
-        font-weight: 900
+        display: flex
+        flex-direction: column
+        perspective: 1000px
         @media all and (max-width: 700px)
           white-space: nowrap
-          font-size: 2em
+        .shown-text
+          transition: 0.4s ease
+          color: red
+          height: 0
+          transform-origin: center
+          transform: rotate3d(1, 0, 0, 0)
+        .hidden-text
+          transform-origin: bottom
+          transition: 0.4s ease
+          -webkit-text-fill-color: white
+          transform: rotate3d(1, 0, 0, -90deg)
+      .submit-button:hover > .shown-text
+          -webkit-text-fill-color: rgb(53, 38, 38)
+          transform: rotate3d(1, 0, 0, -90deg)
+      .submit-button:hover > .hidden-text
+          -webkit-text-fill-color: white
+          transform: rotate3d(1, 0, 0, -0deg)
       .submit-button:hover
         background: button-hover-color
         border-color: button-hover-color
@@ -105,3 +131,4 @@ theme-color = #79737d
         padding: 20px
         margin: 10px
         margin-bottom: 0
+        width: 100%

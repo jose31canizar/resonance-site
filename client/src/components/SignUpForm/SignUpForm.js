@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SignUpForm.styl";
 import { Link } from "react-router-dom";
+import history from "../../history";
 
 class SignUpForm extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class SignUpForm extends Component {
     this.handleEmail = this.handleEmail.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.addMember = this.addMember.bind(this);
   }
   handleName(event) {
     this.setState({ name: event.target.value.trim() });
@@ -74,7 +76,7 @@ class SignUpForm extends Component {
       }
     }
   };
-  addMember = () => {
+  addMember() {
     fetch(`/api/${this.props.type}`, {
       method: "POST",
       headers: {
@@ -89,17 +91,19 @@ class SignUpForm extends Component {
         }
       })
     })
-      .then(function(res) {
+      .then(res => {
         const type =
           this.props.type === "addMember" ? "/thankyou" : "/thankyoubeta";
         // window.location.replace(`http://resonator.life${type}`); //only needed for case of keypress
         // window.location = `http://resonator.life${type}`;
-        window.location = `http://resonator.life${type}`;
+        // window.location = `http://resonator.life${type}`;
+        // this.props.closeSignUpForm();
+        history.push(type);
       })
       .catch(function(res) {
         console.log(res);
       });
-  };
+  }
   handleClose(e) {
     e.stopPropagation();
   }
@@ -150,7 +154,8 @@ class SignUpForm extends Component {
               onMouseDown={this.handleSubmit}
             >
               <Link to={this.state.navigate} className="submit-button">
-                {buttonText}
+                <p className="shown-text">{buttonText}</p>
+                <p className="hidden-text">{buttonText}</p>
               </Link>
             </div>
           </form>

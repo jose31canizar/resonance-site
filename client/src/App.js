@@ -51,7 +51,6 @@ class App extends Component {
     this.closeSignUpForm = this.closeSignUpForm.bind(this);
   }
   openSignUpForm() {
-    console.log("opening!");
     this.setState({
       signUpForm: true
     });
@@ -86,8 +85,6 @@ class App extends Component {
         loggedIn={this.props.loggedIn}
       />
     );
-
-    console.log(this.openSignUpForm);
 
     return (
       <div className="App">
@@ -138,24 +135,30 @@ class App extends Component {
 
               <Route
                 path="/thankyou"
-                render={() => <ThankYou text={ThankYouData[0].text} />}
+                render={() => (
+                  <ThankYou
+                    text={ThankYouData[0].text}
+                    closeSignUpForm={this.closeSignUpForm}
+                  />
+                )}
               />
               <Route
                 path="/thankyoubeta"
-                render={() => <ThankYou text={ThankYouData[1].text} />}
+                render={() => (
+                  <ThankYou
+                    text={ThankYouData[1].text}
+                    closeSignUpForm={this.closeSignUpForm}
+                  />
+                )}
               />
               <Route
                 path="*"
-                render={() => {
-                  console.log("render");
-                  console.log(this.openSignUpForm);
-                  return (
-                    <Registration
-                      width={this.state.width}
-                      openSignUpForm={this.openSignUpForm}
-                    />
-                  );
-                }}
+                render={() => (
+                  <Registration
+                    width={this.state.width}
+                    openSignUpForm={this.openSignUpForm}
+                  />
+                )}
               />
             </Switch>
           </Layout>

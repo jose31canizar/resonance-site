@@ -12,6 +12,8 @@ theme-color = #79737d
     flex-direction: column
   justify-content: center
   align-items: center
+  @media all and (max-width: 1200px)
+    padding-top: 100vh
   .login-header
     animation: reveal 1s
     padding: 50px
@@ -22,7 +24,7 @@ theme-color = #79737d
     display: flex
     justify-content: center
     flex-direction: column
-    h2 
+    h2
       white-space: nowrap
       @media all and (max-width: 1200px)
         white-space: pre-line
@@ -47,7 +49,7 @@ theme-color = #79737d
     /* -webkit-text-fill-color: theme-color */
     color: black
     caret-color: theme-color
-    padding: 10px 5px 
+    padding: 10px 5px
     margin: 5px 0
     /* text-transform: lowercase */
     border-radius: 4px

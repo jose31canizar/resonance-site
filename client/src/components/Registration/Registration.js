@@ -26,9 +26,6 @@ import "./Registration.styl";
 
 export default class Registration extends Component {
   render() {
-    console.log("register");
-    console.log(this.props);
-    console.log(this.props.openSignUpForm);
     return (
       <div className="registration">
         <Header

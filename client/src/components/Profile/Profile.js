@@ -38,9 +38,6 @@ class Profile extends Component {
     this.state = {};
   }
   componentDidMount() {
-    console.log("id");
-    console.log(this.props.id);
-
     if (this.props.id) {
       this.props.loadUserData(this.props.id);
       this.props.loadPostData(this.props.id);

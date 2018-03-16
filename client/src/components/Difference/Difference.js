@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
-import './Difference.styl'
+import React, { Component } from "react";
+import "./Difference.styl";
 
 class Difference extends Component {
   render() {
     return (
       <div className="difference">
-        <div className='headline'></div>
-        <span className='video'>
-
-        </span>
-        <span className='description'>
-          <p></p>
+        <div className="headline" />
+        <span className="video" />
+        <span className="description">
+          <p />
         </span>
       </div>
     );
