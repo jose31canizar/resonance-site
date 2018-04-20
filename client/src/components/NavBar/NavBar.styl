@@ -67,7 +67,8 @@ nav-bar-text-color = white
     display: flex
     align-items: center
     box-sizing: border-box
-    display: grid;
+    @media all and (max-width: 1200px)
+      display: grid
     grid-template-columns: repeat(2, 1fr);
     a
       font-size: 0.5em
