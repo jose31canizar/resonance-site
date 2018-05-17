@@ -1,28 +1,13 @@
 [
   {
-    "title":"About Resonance",
+    "title":"Hello, Resonators.",
     "description": {
-        "title":"Hello, Resonators.",
         "reasons": [
             "Here's what we think the future of music sharing looks like."
         ],
         "subtitle":"Features"
       },
     "topics": [
-      {
-        "image":"headphones_logo",
-        "title":"Personalize",
-        "facts": [
-          "• Create a personalized profile that reflects your taste in music."
-        ]
-      },
-      {
-        "image":"chat",
-        "title":"Connect",
-        "facts": [
-          "• Follow others and discover music with them."
-        ]
-      },
       {
         "image":"music-player",
         "title":"Song of The Week",
@@ -35,6 +20,20 @@
         "title":"Gamification",
         "facts": [
           "• Rank up on the gamified platform by showing others your know your music."
+        ]
+      },
+      {
+        "image":"headphones_logo",
+        "title":"Customize",
+        "facts": [
+          "• Create a personalized profile that reflects your quality taste in music."
+        ]
+      },
+      {
+        "image":"chat",
+        "title":"Connect",
+        "facts": [
+          "• Follow others to find them on your feed."
         ]
       }
     ],

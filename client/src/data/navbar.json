@@ -3,6 +3,10 @@
     "betaStatement": "Sign up for the beta",
     "navItems": [
       {
+        "name": "home",
+        "route": "/"
+      },
+      {
         "name": "news",
         "route": "news"
       },

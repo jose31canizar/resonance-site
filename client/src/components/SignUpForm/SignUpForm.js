@@ -129,7 +129,7 @@ class SignUpForm extends Component {
         <div className="registration-block" onClick={this.handleClose}>
           <h2>{title}</h2>
           <h3>{statement}</h3>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} method="post">
             <input
               placeholder="first name"
               type="text"

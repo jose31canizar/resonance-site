@@ -8,7 +8,11 @@ export default class News extends Component {
       <div className="news">
         {NewsData.map((newsItem, i) => (
           <div className="news-item">
-            <p>News</p>
+            <h2>{newsItem.headline}</h2>
+            <h3>{newsItem.caption}</h3>
+            <div class="paragraph">
+              <p>{newsItem.paragraph}</p>
+            </div>
           </div>
         ))}
       </div>

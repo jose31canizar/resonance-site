@@ -1,10 +1,19 @@
-nav-bar-height = 75vh
+nav-bar-height = 80vh
 nav-bar-color = white
 nav-bar-text-color = white
 
 
 .flip
   transform: rotate3d(1, 0, 0, -90deg)
+
+.black-text
+  .nav-bar-header .icon-container h1
+  .nav-items a
+  .account-actions a
+  .statement a
+    color: black
+    @media all and (max-width: 1200px)
+      color: white
 
 .nav-bar-wrapper
   perspective: 100vw
@@ -14,7 +23,7 @@ nav-bar-text-color = white
   width: 100%
   z-index: 11
   overflow: hidden
-  background: url('../../img/background_3.jpg')
+  background: 'black'
   background-position: 50% 50%
   @media all and (max-width: 1200px)
     overflow: visible

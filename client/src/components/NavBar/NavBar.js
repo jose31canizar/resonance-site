@@ -44,7 +44,10 @@ class NavBar extends Component {
     this.flip = this.flip.bind(this);
   }
   componentDidMount() {
-    // document.addEventListener('scroll', this.flip)
+    // document.addEventListener("scroll", this.flip);
+    document.addEventListener("scroll", () =>
+      this.setState({ distance: window.pageYOffset })
+    );
   }
   setSelected(title) {
     this.setState({
@@ -81,15 +84,19 @@ class NavBar extends Component {
       <div className="nav-bar-wrapper">
         <Parallax
           className="nav-bar-background"
-          src={require("../../img/background_2.jpg")}
+          src={require("../../img/waves-2.jpg")}
         />
-        <div className={"nav-bar" + (this.state.flip ? " flip" : "")}>
+        <div
+          className={`nav-bar${this.state.flip ? " flip" : ""}${
+            this.state.distance > 200 ? " black-text" : ""
+          }`}
+        >
           <div className="nav-bar-header">
             <Link className="icon-container" to="/">
               <h1>resonance</h1>
               <img
                 className="icon"
-                src={require("../../img/resonance_logo_icon.png")}
+                src={require("../../img/resonance-lower.png")}
               />
             </Link>
             {this.props.firstName ? (

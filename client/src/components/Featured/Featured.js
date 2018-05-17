@@ -12,20 +12,31 @@ import "./Featured.styl";
 export default class Featured extends Component {
   constructor(props) {
     super(props);
+    console.log(FeaturedData.flatMap(feature => feature.links));
+    console.log(Object.values(FeaturedData).flatMap(feature => feature.links));
     this.state = {
-      hover: false
+      hover_states: [false, false]
     };
     this.showHoverTitle = this.showHoverTitle.bind(this);
     this.hideHoverTitle = this.hideHoverTitle.bind(this);
   }
-  showHoverTitle() {
-    this.setState({ hover: true });
+  showHoverTitle(i) {
+    console.log(i);
+    this.setState((prevState, props) => ({
+      hover_states: prevState.hover_states[i].map(
+        (hoverState, i) => (hoverState === i ? true : false)
+      )
+    }));
   }
-  hideHoverTitle() {
-    this.setState({ hover: false });
+  hideHoverTitle(i) {
+    this.setState((prevState, props) => ({
+      hover_states: prevState.hover_states[i].map(
+        (hoverState, i) => (hoverState === i ? false : true)
+      )
+    }));
   }
   render() {
-    const { hover } = this.state;
+    const { hover_states } = this.state;
     return (
       <div className="featured">
         {FeaturedData.map((feature, i) => (
@@ -34,10 +45,12 @@ export default class Featured extends Component {
               <a
                 href={link.link}
                 className="feature-image"
-                onMouseOver={this.showHoverTitle}
-                onMouseOut={this.hideHoverTitle}
+                onMouseOver={() => this.showHoverTitle(i)}
+                onMouseOut={() => this.hideHoverTitle(i)}
               >
-                <h2 className={`hover-title ${hover ? "show" : "hide"}`}>
+                <h2
+                  className={`hover-title ${hover_states[i] ? "show" : "hide"}`}
+                >
                   {link.name}
                 </h2>
                 <img src={require(`../../img/${feature.image}`)} />

@@ -118,7 +118,7 @@ class Login extends Component {
               : "to become a Resonance beta tester"}
           </p>
         </div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} method="post">
           {type === "login" ? (
             <Fragment>
               <input

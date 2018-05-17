@@ -33,7 +33,6 @@
     width: 100%
     padding: 40px 0
     font-weight: 900
-    color: #483e44
     @media all and (max-width: 700px)
       padding: 20px 0
   h2
@@ -67,7 +66,7 @@
     display: grid
     column-gap: 1em
     grid-row-gap: 100px
-    grid-template-columns: 33% 33%
+    grid-template-columns: 43% 43%
     @media all and (max-width: 1200px)
       grid-template-columns: 50% 50%
     @media all and (max-width: 700px)
@@ -78,7 +77,9 @@
     justify-content: center
     align-content: center
     .topic
-      width: 60%
+      padding: 0 100px
+      box-sizing: border-box
+      width: 100%
       @media all and (max-width: 700px)
         width: 100%
         padding: 0 40px
@@ -105,13 +106,14 @@
     justify-content: center
     align-content: center
     .topic
-      width: 60%
       @media all and (max-width: 700px)
         width: 100%
         padding: 0 40px
         box-sizing: border-box
         margin-bottom: 40px
   .topic
+    padding: 0 100px
+    box-sizing: border-box
     width: 100%
     @media all and (max-width: 700px)
       width: 100%
