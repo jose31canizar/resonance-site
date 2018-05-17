@@ -9,31 +9,45 @@ import FeaturedData from "../../data/featured.json";
 
 import "./Featured.styl";
 
+const concat = (x, y) => x.concat(y);
+
+const flatMap = (f, xs) => xs.map(f).reduce(concat, []);
+
 export default class Featured extends Component {
   constructor(props) {
     super(props);
-    console.log(FeaturedData.flatMap(feature => feature.links));
-    console.log(Object.values(FeaturedData).flatMap(feature => feature.links));
     this.state = {
-      hover_states: [false, false]
+      hover_states: FeaturedData.reduce(function(acc, cur, i) {
+        acc[cur.id] = cur.links.map(() => false);
+        return acc;
+      }, {})
     };
     this.showHoverTitle = this.showHoverTitle.bind(this);
     this.hideHoverTitle = this.hideHoverTitle.bind(this);
   }
-  showHoverTitle(i) {
+  showHoverTitle(id, i) {
+    console.log(id);
     console.log(i);
-    this.setState((prevState, props) => ({
-      hover_states: prevState.hover_states[i].map(
-        (hoverState, i) => (hoverState === i ? true : false)
-      )
-    }));
+    console.log(this.state.hover_states);
+    this.setState((prevState, props) => {
+      var newState = prevState.hover_states;
+      newState[id] = prevState.hover_states[id].map(flag => !flag);
+      return {
+        hover_states: newState
+      };
+    });
   }
-  hideHoverTitle(i) {
-    this.setState((prevState, props) => ({
-      hover_states: prevState.hover_states[i].map(
-        (hoverState, i) => (hoverState === i ? false : true)
-      )
-    }));
+  hideHoverTitle(id, i) {
+    console.log(id);
+    console.log(i);
+    console.log(this.state.hover_states);
+    this.setState((prevState, props) => {
+      var newState = prevState.hover_states;
+      newState[id] = prevState.hover_states[id].map(flag => !flag);
+      return {
+        hover_states: newState
+      };
+    });
   }
   render() {
     const { hover_states } = this.state;
@@ -41,15 +55,17 @@ export default class Featured extends Component {
       <div className="featured">
         {FeaturedData.map((feature, i) => (
           <div className="feature">
-            {feature.links.map((link, i) => (
+            {feature.links.map((link, j) => (
               <a
                 href={link.link}
                 className="feature-image"
-                onMouseOver={() => this.showHoverTitle(i)}
-                onMouseOut={() => this.hideHoverTitle(i)}
+                onMouseOver={() => this.showHoverTitle(feature.id, j)}
+                onMouseOut={() => this.hideHoverTitle(feature.id, j)}
               >
                 <h2
-                  className={`hover-title ${hover_states[i] ? "show" : "hide"}`}
+                  className={`hover-title ${
+                    hover_states[feature.id][j] ? "show" : "hide"
+                  }`}
                 >
                   {link.name}
                 </h2>

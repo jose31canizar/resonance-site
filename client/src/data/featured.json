@@ -1,25 +1,30 @@
 [
   {
-    "title":"Trevor James - Artificial Sweeteners (Ft. Jake Valli).",
-    "image":"trevor_james.jpg",
-    "date":"April 24th, 2018",
-    "description":"Bassy. Kamakura welcomes Trevor James into the Kamakura Collective. Enjoy.",
+    "title": "Trevor James - Artificial Sweeteners (Ft. Jake Valli).",
+    "image": "trevor_james.jpg",
+    "date": "April 24th, 2018",
+    "id": "1",
+    "description":
+      "Bassy. Kamakura welcomes Trevor James into the Kamakura Collective. Enjoy.",
     "links": [
       {
-        "name":"The Kamakura SoundCloud",
-        "link":"https://soundcloud.com/kamakurarecords/trevor-james-artificial-sweeteners-ft-jake-valli"
+        "name": "The Kamakura SoundCloud",
+        "link":
+          "https://soundcloud.com/kamakurarecords/trevor-james-artificial-sweeteners-ft-jake-valli"
       }
     ]
   },
   {
-    "title":"The Jukebox Mixtape.",
-    "image":"jukebox.png",
-    "date":"March 7th, 2018",
-    "description":"Late night grooves and self-expressive soul. The Jukebox Mixtape drops March 7th. Watch for it on the Kamakura SoundCloud.",
+    "title": "The Jukebox Mixtape.",
+    "image": "jukebox.png",
+    "date": "March 7th, 2018",
+    "id": "2",
+    "description":
+      "Late night grooves and self-expressive soul. The Jukebox Mixtape drops March 7th. Watch for it on the Kamakura SoundCloud.",
     "links": [
       {
-        "name":"The Kamakura SoundCloud",
-        "link":"https://soundcloud.com/kamakurarecords"
+        "name": "The Kamakura SoundCloud",
+        "link": "https://soundcloud.com/kamakurarecords"
       }
     ]
   }
