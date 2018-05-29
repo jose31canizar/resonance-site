@@ -2,9 +2,11 @@
   padding-top: 130px
   @media all and (max-width: 1200px)
     padding-top: 100vh
-  display: flex
-  justify-content: center
-  align-items: center
+    display: flex
+    justify-content: center
+    align-items: center
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
   background: #f1f1f1
   @media all and (max-width: 1200px)
     flex-direction: column
@@ -17,7 +19,7 @@
     @media all and (max-width: 1200px)
       padding: 40px 0
       text-align: center
-      width: 100%
+      width: 50%
   .feature
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -25,6 +27,8 @@
     @media all and (max-width: 1200px)
       display: flex
       flex-direction: column
+      justify-content: center
+      align-items: center
     align-items: flex-start
     box-sizing: border-box;
     padding: 60px 5vw;

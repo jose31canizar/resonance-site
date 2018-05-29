@@ -1,10 +1,11 @@
-<<<<<<< HEAD
-# resonance
-Make live music better by connecting with other live music goers.
+# resonance site
+Great new music right at your fingertips.
 
 
 ![Alt text](client/src/img/icon.png?raw=true "Resonance")
-=======
-# Resonance
-An app for live music goers.
->>>>>>> b400f71f6e55130d320595cefa93581700ccd13f
+
+##About
+
+Resonance is a platform for sharing, curating, and cultivating quality music.
+
+We don't use a fancy algorithm. We offer a community driven towards quality, and we do so by collaboratively crowdsourcing your network's great music tastes.

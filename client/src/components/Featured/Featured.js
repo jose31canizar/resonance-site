@@ -69,7 +69,7 @@ export default class Featured extends Component {
                 >
                   {link.name}
                 </h2>
-                <img src={require(`../../img/${feature.image}`)} />
+                <img src={feature.image} />
               </a>
             ))}
 
