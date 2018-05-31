@@ -1,32 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import "raf/polyfill";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducer from './reducers/'
-import { apiMiddleware } from './redux';
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
-import ReactSpinner from 'react-spinjs'
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import reducer from "./reducers/";
+import { apiMiddleware } from "./redux";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-import { PersistGate } from 'redux-persist/lib/integration/react'
+import { PersistGate } from "redux-persist/lib/integration/react";
 
 const persistConfig = {
-    key: 'root',
-    storage: storage,
-  }
+  key: "root",
+  storage: storage
+};
 
-const persistedReducer = persistReducer(persistConfig, reducer)
+const persistedReducer = persistReducer(persistConfig, reducer);
 
-const store = createStore(persistedReducer, {loggedIn: false}, applyMiddleware(apiMiddleware));
+const store = createStore(
+  persistedReducer,
+  { loggedIn: false },
+  applyMiddleware(apiMiddleware)
+);
 
-let persistor = persistStore(store)
+let persistor = persistStore(store);
 
 ReactDOM.render(
-    <Provider store={store}>
-      <PersistGate loading={<ReactSpinner/>} persistor={persistor}>
-        <App />
-      </PersistGate>
-    </Provider>, 
-    document.getElementById('root'));
+  <Provider store={store}>
+    <PersistGate loading={<div />} persistor={persistor}>
+      <App />
+    </PersistGate>
+  </Provider>,
+  document.getElementById("root")
+);

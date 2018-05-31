@@ -8,9 +8,9 @@ export default class Articles extends Component {
   render() {
     console.log(VernonArticle);
     return (
-      <div className="articles">
+      <div class="articles">
         {ArticlesData.map((article, i) => (
-          <div className="article">
+          <div class="article">
             <time>March 15th, 2018</time>
             <label>By Jordan Gillmore</label>
             <VernonArticle />

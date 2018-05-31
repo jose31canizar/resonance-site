@@ -7,7 +7,7 @@ class CallToAction extends Component {
     const { buttonType } = this.props;
     return (
       <div
-        className="call-to-action"
+        class="call-to-action"
         style={{
           backgroundImage: `url(${require("../../img/background.jpg")})`,
           backgroundRepeat: "no-repeat",

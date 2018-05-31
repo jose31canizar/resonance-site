@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import CallToAction from "../CallToAction/CallToAction";
 import NavBar from "../NavBar/NavBar";
-import ReactSpinner from "react-spinjs";
+// import ReactSpinner from "react-spinjs";
 import NavBarData from "../../data/navbar.json";
 
 import "./Profile.styl";
@@ -9,7 +8,6 @@ import "./Profile.styl";
 import SVG from "../../assets/svg";
 
 import { connect } from "react-redux";
-import history from "../../history";
 
 const mapStateToProps = state => {
   return {
@@ -53,7 +51,7 @@ class Profile extends Component {
       favorite_bands
     } = this.props;
     return (
-      <div className="profile">
+      <div class="profile">
         <NavBar
           data={NavBarData[0]}
           openSignUpForm={this.openSignUpForm}
@@ -61,41 +59,41 @@ class Profile extends Component {
           loggedIn={this.props.loggedIn}
           logout={this.props.logout}
         />
-        <div className="profile-header">
-          <div className="profile-info">
+        <div class="profile-header">
+          <div class="profile-info">
             <h2>
               {firstName} {lastName}
             </h2>
             <p>email: {email}</p>
             <p>@{username}</p>
-            <div className="favorite-bands">
+            <div class="favorite-bands">
               {favorite_bands ? (
-                favorite_bands.map((band, i) => <p className="band">{band}</p>)
+                favorite_bands.map((band, i) => <p class="band">{band}</p>)
               ) : (
-                <ReactSpinner />
+                <div />
               )}
             </div>
           </div>
-          <div className="profile-posts">
+          <div class="profile-posts">
             {posts ? (
               posts.map((post, i) => (
-                <div className="post">
-                  <div className="top-bar">
-                    <div className="profile-image" />
-                    <p className="name">
+                <div class="post">
+                  <div class="top-bar">
+                    <div class="profile-image" />
+                    <p class="name">
                       {firstName} {lastName}
                     </p>
                     <SVG name="TripleDot" />
                   </div>
-                  <div className="song-image" />
-                  <div className="song-info">
+                  <div class="song-image" />
+                  <div class="song-info">
                     <h2>{post.title}</h2>
                     <h2>{post.artist}</h2>
                     <h3>{post.album}</h3>
-                    <p className="source">Listen from {post.source}</p>
+                    <p class="source">Listen from {post.source}</p>
                   </div>
-                  <p className="caption">{post.caption}</p>
-                  <div className="action-bar">
+                  <p class="caption">{post.caption}</p>
+                  <div class="action-bar">
                     <div>
                       <SVG name="Like" />
                       <p>{post.likes ? post.likes : "0"}</p>
@@ -113,7 +111,7 @@ class Profile extends Component {
                 </div>
               ))
             ) : (
-              <ReactSpinner />
+              <div />
             )}
           </div>
         </div>

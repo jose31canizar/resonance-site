@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import NavBar from "./components/NavBar/NavBar";
 import Registration from "./components/Registration/Registration";
 import Beta from "./components/Beta/Beta";
 import ThankYou from "./components/ThankYou/ThankYou";
 import Login from "./components/Login/Login";
 import "./styl/main.styl";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import ThankYouData from "./data/thankyou.json";
 import News from "./components/News/News";
 import Featured from "./components/Featured/Featured";
@@ -76,18 +75,8 @@ class App extends Component {
     return this.props.loggedIn;
   }
   render() {
-    const beta = this.props.loggedIn ? (
-      <Beta width={this.state.width} />
-    ) : (
-      <Login
-        type="login"
-        width={this.state.width}
-        loggedIn={this.props.loggedIn}
-      />
-    );
-
     return (
-      <div className="App">
+      <div class="App">
         <Router history={history}>
           <Layout
             openSignUpForm={this.openSignUpForm}

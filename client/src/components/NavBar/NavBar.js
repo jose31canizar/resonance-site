@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import data from "../../data/navbar.json";
 import { Link } from "react-router-dom";
-import SmoothScroll from "../SmoothScroll/SmoothScroll";
 import "./NavBar.styl";
-import FreePassButton from "../FreePassButton/FreePassButton";
 import Parallax from "../Parallax/Parallax";
 
 import { connect } from "react-redux";
@@ -81,51 +78,49 @@ class NavBar extends Component {
   render() {
     const { statement, navItems } = this.props.data;
     return (
-      <div className="nav-bar-wrapper">
+      <div class="nav-bar-wrapper">
         <Parallax
-          className="nav-bar-background"
+          class="nav-bar-background"
           src={require("../../img/waves-2.jpg")}
         />
         <div
-          className={`nav-bar${this.state.flip ? " flip" : ""}${
+          class={`nav-bar${this.state.flip ? " flip" : ""}${
             this.state.distance > 200 ? " black-text" : ""
           }`}
         >
-          <div className="nav-bar-header">
-            <Link className="icon-container" to="/">
+          <div class="nav-bar-header">
+            <Link class="icon-container" to="/">
               <h1>resonance</h1>
               <img
-                className="icon"
+                class="icon"
                 src={require("../../img/resonance-lower.png")}
+                alt="resonance"
               />
             </Link>
             {this.props.firstName ? (
-              <Link to="profile" className="first-name">
+              <Link to="profile" class="first-name">
                 Hello, {this.props.firstName}!
               </Link>
-            ) : (
-              ""
-            )}
+            ) : null}
           </div>
-          <p className="statement">
+          <p class="statement">
             <Link to="beta">{statement}</Link>
           </p>
-          <h3 className="nav-items">
+          <h3 class="nav-items">
             {navItems.map((navItem, i) => (
-              <Link to={navItem.route}>{navItem.name}</Link>
+              <Link key={i} to={navItem.route}>
+                {navItem.name}
+              </Link>
             ))}
           </h3>
           {this.props.loggedIn ? (
-            <div className="account-actions">
-              <p
-                className="logout-button"
-                onMouseDown={() => this.props.logout()}
-              >
+            <div class="account-actions">
+              <p class="logout-button" onMouseDown={() => this.props.logout()}>
                 logout
               </p>
             </div>
           ) : (
-            <div className="account-actions">
+            <div class="account-actions">
               <Link to="login">Login</Link>
               <Link to="signup">Sign up</Link>
             </div>

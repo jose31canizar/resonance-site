@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import Panel from '../Panel/Panel';
-import './Section.styl'
+import React, { Component } from "react";
+import Panel from "../Panel/Panel";
+import "./Section.styl";
 
 class Section extends Component {
   render() {
     return (
-      <div className='section'>
-        <div className='section-title'>
-          <h1>
-            {this.props.title}
-          </h1>
+      <div class="section">
+        <div class="section-title">
+          <h1>{this.props.title}</h1>
         </div>
         <Panel
           title={this.props.title}
@@ -18,8 +16,7 @@ class Section extends Component {
           letter={this.props.letter}
           releases={require(`../../constants/${this.props.name}-releases.md`)}
           wallpaper={this.props.wallpaper}
-          >
-        </Panel>
+        />
       </div>
     );
   }

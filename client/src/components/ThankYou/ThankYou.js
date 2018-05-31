@@ -8,7 +8,7 @@ class ThankYou extends Component {
   render() {
     const { text } = this.props;
     return (
-      <div className="thank-you">
+      <div class="thank-you">
         <h1>{text}</h1>
       </div>
     );

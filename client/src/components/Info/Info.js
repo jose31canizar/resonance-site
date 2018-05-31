@@ -8,11 +8,11 @@ class Info extends Component {
     const firstRowOfTopics = this.props.data.topics.slice(0, 2);
     const secondRowOfTopics = this.props.data.topics.slice(2, 6);
     return (
-      <div className="info">
+      <div class="info">
         <ScrollReveal id="info-header">
           <h2>{this.props.data.title}</h2>
-          <h4 className="subtitle">{this.props.data.description.title}</h4>
-          <div className="reasons">
+          <h4 class="subtitle">{this.props.data.description.title}</h4>
+          <div class="reasons">
             {this.props.data.description.reasons.map((item, i) => (
               <p key={i}>{item}</p>
             ))}
@@ -20,37 +20,51 @@ class Info extends Component {
         </ScrollReveal>
         <h3>{this.props.data.description.subtitle}</h3>
         <ScrollReveal id="reveal-first-row">
-          <div className="first-row-topics">
+          <div class="block-row">
             {firstRowOfTopics.map((item, i) => (
-              <div className="topic" key={i}>
-                <div className="img-feature">
-                  <img src={require(`../../img/${item.image}.png`)} />
+              <div class="topic" key={i}>
+                <div class="img-feature">
+                  <img
+                    src={require(`../../img/${item.image}.png`)}
+                    alt={item.image}
+                  />
                 </div>
                 <h4>{item.title}</h4>
-                <div className="facts">
-                  {item.facts.map((fact, i) => <p key={i}>{fact}</p>)}
+                <div class="facts">
+                  {item.facts.map((fact, i) => (
+                    <p class="info-block-caption" key={i}>
+                      {fact}
+                    </p>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </ScrollReveal>
         <ScrollReveal id="reveal-second-row">
-          <div className="second-row-topics">
+          <div class="block-row">
             {secondRowOfTopics.map((item, i) => (
-              <div className="topic" key={i}>
-                <div className="img-feature">
-                  <img src={require(`../../img/${item.image}.png`)} />
+              <div class="topic" key={i}>
+                <div class="img-feature">
+                  <img
+                    src={require(`../../img/${item.image}.png`)}
+                    alt={item.image}
+                  />
                 </div>
                 <h4>{item.title}</h4>
-                <div className="facts">
-                  {item.facts.map((fact, i) => <p key={i}>{fact}</p>)}
+                <div class="facts">
+                  {item.facts.map((fact, i) => (
+                    <p class="info-block-caption" key={i}>
+                      {fact}
+                    </p>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </ScrollReveal>
         <ScrollReveal id="info-epilogue">
-          <h2 className="epilogue">{this.props.data.epilogue}</h2>
+          <h2 class="epilogue">{this.props.data.epilogue}</h2>
           <FreePassButton openSignUpForm={this.props.openSignUpForm} white />
         </ScrollReveal>
       </div>

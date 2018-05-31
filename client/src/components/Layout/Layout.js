@@ -9,7 +9,7 @@ import NavBarData from "../../data/navbar.json";
 export default class Layout extends Component {
   render() {
     return (
-      <div className="layout">
+      <div class="layout">
         {this.props.signUpForm ? (
           <SignUpForm
             type="addMember"

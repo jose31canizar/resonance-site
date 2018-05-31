@@ -53,7 +53,7 @@ class SignUpForm extends Component {
     return false;
   }
   handleKeyPress = event => {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       event.preventDefault();
       if (this.state.email && this.state.name) {
         const type =
@@ -125,8 +125,8 @@ class SignUpForm extends Component {
   render() {
     const { title, statement, buttonText } = this.props.data;
     return (
-      <div className="sign-up-form" onClick={this.props.closeSignUpForm}>
-        <div className="registration-block" onClick={this.handleClose}>
+      <div class="sign-up-form" onClick={this.props.closeSignUpForm}>
+        <div class="registration-block" onClick={this.handleClose}>
           <h2>{title}</h2>
           <h3>{statement}</h3>
           <form onSubmit={this.handleSubmit} method="post">
@@ -145,17 +145,17 @@ class SignUpForm extends Component {
               onKeyPress={this.handleKeyPress}
             />
             {this.state.warning ? (
-              <p className="warning">{this.state.warning}</p>
+              <p class="warning">{this.state.warning}</p>
             ) : (
               <p>&nbsp;</p>
             )}
             <div
-              className="submit-button-container"
+              class="submit-button-container"
               onMouseDown={this.handleSubmit}
             >
-              <Link to={this.state.navigate} className="submit-button">
-                <p className="shown-text">{buttonText}</p>
-                <p className="hidden-text">{buttonText}</p>
+              <Link to={this.state.navigate} class="submit-button">
+                <p class="shown-text">{buttonText}</p>
+                <p class="hidden-text">{buttonText}</p>
               </Link>
             </div>
           </form>

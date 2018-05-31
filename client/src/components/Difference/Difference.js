@@ -4,10 +4,10 @@ import "./Difference.styl";
 class Difference extends Component {
   render() {
     return (
-      <div className="difference">
-        <div className="headline" />
-        <span className="video" />
-        <span className="description">
+      <div class="difference">
+        <div class="headline" />
+        <span class="video" />
+        <span class="description">
           <p />
         </span>
       </div>

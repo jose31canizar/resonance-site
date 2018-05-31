@@ -17,6 +17,9 @@
     box-sizing: border-box
     @media all and (max-width: 700px)
       padding: 10px 56px
+    @media all and (max-width: 1200px)
+      padding: 50px 200px
+      text-align: center
 
   h2
     padding-top: 50px
@@ -61,14 +64,15 @@
     p
       @media all and (max-width: 700px)
         font-size: 1.5em
-  .first-row-topics
+  .block-row
     width: 100%
     display: grid
     column-gap: 1em
     grid-row-gap: 100px
     grid-template-columns: 43% 43%
     @media all and (max-width: 1200px)
-      grid-template-columns: 50% 50%
+      grid-template-columns: 33% 33%
+      padding: 0
     @media all and (max-width: 700px)
       grid-row-gap: 70px
       grid-template-columns: 100%
@@ -80,37 +84,17 @@
       padding: 0 100px
       box-sizing: border-box
       width: 100%
+      @media all and (max-width: 1200px)
+        padding: 25px
       @media all and (max-width: 700px)
         width: 100%
         padding: 0 40px
         box-sizing: border-box
         margin-bottom: 40px
-  .second-row-topics
-    width: 100%
-    padding-top: 90px
-    margin-top: 100px
-    @media all and (max-width: 700px)
-      padding: 0
-      margin: 0
-    display: grid
-    column-gap: 1em
-    grid-row-gap: 100px
-    grid-template-columns: 33% 33%
-    @media all and (max-width: 1200px)
-      grid-template-columns: repeat(2, 3fr )
-    @media all and (max-width: 700px)
-      grid-row-gap: 70px
-      grid-template-columns: repeat(1, 1fr )
-    grid-template-rows: auto
-    justify-items: center
-    justify-content: center
-    align-content: center
-    .topic
-      @media all and (max-width: 700px)
-        width: 100%
-        padding: 0 40px
-        box-sizing: border-box
-        margin-bottom: 40px
+      .info-block-caption
+        padding: 0
+        text-align: left
+        font-size: 1.5em
   .topic
     padding: 0 100px
     box-sizing: border-box

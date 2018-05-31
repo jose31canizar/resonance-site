@@ -1,17 +1,11 @@
 import React, { Component } from "react";
-
-import NavBar from "../NavBar/NavBar";
-import SignUpForm from "../SignUpForm/SignUpForm";
-
-import SignUpFormData from "../../data/sign-up-form.json";
-import NavBarData from "../../data/navbar.json";
 import FeaturedData from "../../data/featured.json";
 
 import "./Featured.styl";
 
-const concat = (x, y) => x.concat(y);
+// const concat = (x, y) => x.concat(y);
 
-const flatMap = (f, xs) => xs.map(f).reduce(concat, []);
+// const flatMap = (f, xs) => xs.map(f).reduce(concat, []);
 
 export default class Featured extends Component {
   constructor(props) {
@@ -52,29 +46,29 @@ export default class Featured extends Component {
   render() {
     const { hover_states } = this.state;
     return (
-      <div className="featured">
+      <div class="featured">
         {FeaturedData.map((feature, i) => (
-          <div className="feature">
+          <div class="feature">
             {feature.links.map((link, j) => (
               <a
                 href={link.link}
-                className="feature-image"
+                class="feature-image"
                 onMouseOver={() => this.showHoverTitle(feature.id, j)}
                 onMouseOut={() => this.hideHoverTitle(feature.id, j)}
               >
                 <h2
-                  className={`hover-title ${
+                  class={`hover-title ${
                     hover_states[feature.id][j] ? "show" : "hide"
                   }`}
                 >
                   {link.name}
                 </h2>
-                <img src={feature.image} />
+                <img src={feature.image} alt={feature.image} />
               </a>
             ))}
 
             <h2>{feature.title}</h2>
-            <div className="feature-info">
+            <div class="feature-info">
               <time>{feature.date}</time>
               <p>{feature.description}</p>
             </div>

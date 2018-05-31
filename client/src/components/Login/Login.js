@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import FreePassButton from "../FreePassButton/FreePassButton";
-import ScrollReveal from "../ScrollReveal/ScrollReveal";
 import "./Login.styl";
 import { Link } from "react-router-dom";
-import { debounce } from "lodash";
+// import { debounce } from "lodash";
 
 import { connect } from "react-redux";
-
-import history from "../../history";
 
 const mapStateToProps = state => {
   return {
@@ -108,8 +104,8 @@ class Login extends Component {
     const { type } = this.props;
     const Fragment = React.Fragment;
     return (
-      <div className="login">
-        <div className="login-header">
+      <div class="login">
+        <div class="login-header">
           <h2>Resonance Site {type === "login" ? "Login" : "Sign Up"}</h2>
           <p>
             {type === "login" ? "log in" : "sign up"} to{" "}
@@ -174,20 +170,20 @@ class Login extends Component {
             </Fragment>
           )}
 
-          <p className="mask-button" onMouseDown={this.toggleMask}>
+          <p class="mask-button" onMouseDown={this.toggleMask}>
             toggle mask
           </p>
           <p>{this.props.warning ? this.props.warning : this.state.warning}</p>
           {type === "login" ? (
-            <p className="sub-text">
+            <p class="sub-text">
               Don't have an account? <Link to="signup">Sign up!</Link>
             </p>
           ) : (
-            <p className="sub-text">
+            <p class="sub-text">
               Already have an account? <Link to="login">Login!</Link>
             </p>
           )}
-          <div className="submit-button" onMouseDown={this.handleSubmit}>
+          <div class="submit-button" onMouseDown={this.handleSubmit}>
             {type === "login" ? "log in" : "sign up"}
           </div>
         </form>

@@ -138,6 +138,7 @@ export const apiMiddleware = store => next => action => {
             // console.log(err);
           }
         );
+      break;
     default:
       break;
   }

@@ -8,8 +8,8 @@ class FreePassButton extends Component {
       ? "free-pass-button-white"
       : "free-pass-button";
     return (
-      <div className={type} onMouseDown={() => this.props.openSignUpForm()}>
-        <h2 className={`free-pass`}>
+      <div class={type} onMouseDown={() => this.props.openSignUpForm()}>
+        <h2 class={`free-pass`}>
           {buttonType === "beta" ? "Sign up!" : "Subscribe!"}
         </h2>
       </div>
