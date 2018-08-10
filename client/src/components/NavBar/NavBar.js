@@ -90,7 +90,7 @@ class NavBar extends Component {
         >
           <div class="nav-bar-header">
             <Link class="icon-container" to="/">
-              <h1>resonance</h1>
+              <label>resonance</label>
               <img
                 class="icon"
                 src={require("../../img/resonance-lower.png")}
@@ -103,15 +103,13 @@ class NavBar extends Component {
               </Link>
             ) : null}
           </div>
-          <p class="statement">
-            <Link to="beta">{statement}</Link>
-          </p>
           <h3 class="nav-items">
             {navItems.map((navItem, i) => (
               <Link key={i} to={navItem.route}>
                 {navItem.name}
               </Link>
             ))}
+            <Link to="beta">{statement}</Link>
           </h3>
           {this.props.loggedIn ? (
             <div class="account-actions">
@@ -131,4 +129,7 @@ class NavBar extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavBar);

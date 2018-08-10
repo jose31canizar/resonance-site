@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import FreePassButton from "../FreePassButton/FreePassButton";
 import ScrollReveal from "../ScrollReveal/ScrollReveal";
 import "./Header.styl";
@@ -16,12 +17,22 @@ class Header extends Component {
           {/* <video autoPlay loop muted>
             <source src={require("../../img/concert.MOV")} type="video/mp4"/>
           </video> */}
-          <img src={require("../../img/ix-with-poster.png")} alt="poster" />
+          <img
+            class="phone-img"
+            src={require("../../img/ix-with-poster.png")}
+            alt="poster"
+          />
           <div class="description">
             <p>{description}</p>
             <p>{offer}</p>
             <div class="ticket">
-              <img src={require("../../img/ticket.png")} alt="ticket" />
+              <Link to="beta">
+                <img
+                  class="ticket-img"
+                  src={require("../../img/ticket.png")}
+                  alt="ticket"
+                />
+              </Link>
             </div>
           </div>
         </div>

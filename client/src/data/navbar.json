@@ -1,5 +1,6 @@
-[{
-    "statement":"The Resonance Beta App is coming.",
+[
+  {
+    "statement": "beta",
     "betaStatement": "Sign up for the beta",
     "navItems": [
       {
@@ -23,4 +24,5 @@
         "route": "profile"
       }
     ]
-    }]
+  }
+]

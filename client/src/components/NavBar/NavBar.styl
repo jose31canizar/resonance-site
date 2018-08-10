@@ -1,12 +1,13 @@
-nav-bar-height = 80vh
+nav-bar-height = 18vh
+nav-bar-mobile-height = 80vh
 nav-bar-color = white
 nav-bar-text-color = white
-
+global-padding = 10rem
 
 .flip
   transform: rotate3d(1, 0, 0, -90deg)
 
-.black-text
+.nav-bar.black-text
   .nav-bar-header .icon-container h1
   .nav-items a
   .account-actions a
@@ -14,6 +15,8 @@ nav-bar-text-color = white
     color: black
     @media all and (max-width: 1200px)
       color: white
+  .nav-items a:hover
+    border: 2px solid black
 
 .nav-bar-wrapper
   perspective: 100vw
@@ -31,11 +34,11 @@ nav-bar-text-color = white
     position: relative
     transform: translate3d(0, 0, 0)
 .nav-bar-background
-  height: 130px
+  height: nav-bar-height
   width: 100%
   position: absolute
   @media all and (max-width: 1200px)
-    height: nav-bar-height
+    height: nav-bar-mobile-height
 .nav-bar
   top: 0
   left: 0
@@ -48,12 +51,12 @@ nav-bar-text-color = white
   transition: transform 0.5s ease
   -webkit-font-smoothing: antialiased
   box-shadow: 0px 0.5px 5px 1px #e4e4e4
-  padding: 0 24px
+  padding: 0 global-padding
   box-sizing: border-box
-  height: 130px
+  height: nav-bar-height
   overflow: hidden
   @media all and (max-width: 1200px)
-    height: nav-bar-height
+    height: nav-bar-mobile-height
     display: flex
     flex-direction: column
     justify-content: center
@@ -66,7 +69,7 @@ nav-bar-text-color = white
     padding: 0
     .free-pass
       font-size: 16pt
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif
       padding: 15px 15px
       @media all and (max-width: 1200px)
         font-size: 9pt
@@ -78,15 +81,14 @@ nav-bar-text-color = white
     box-sizing: border-box
     @media all and (max-width: 1200px)
       display: grid
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)
     a
-      font-size: 0.5em
       transition: 0.3s ease-in-out
-      padding: 5px 15px
+      padding: 10px 15px
       border-radius: 10px
-      border: 2px solid #f1f1f1;
       margin: 10px
       text-align: center
+      border: 2px solid transparent
     a:hover
       background: white
       color: black
@@ -140,13 +142,18 @@ nav-bar-text-color = white
         padding-top: 20px
         justify-content: center
     .icon-container
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row-reverse;
+      display: flex
+      justify-content: space-around
+      align-items: center
+      flex-direction: row-reverse
+      label
+        color: white
+        font-weight: 900
+        letter-spacing: 0.3rem
       .icon
         max-width: 100px
         min-width: 75px
+
         @media all and (max-width: 700px)
           width: 20%
           max-width: 20%

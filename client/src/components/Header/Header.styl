@@ -2,26 +2,29 @@
   width: 100%
   background: #ffffff
   padding: 50px
-  padding-top: 120px
+  padding-top: 18vh
   box-sizing: border-box
   display: flex
   justify-content: center
   flex-direction: column
+  height: 100vh
   @media all and (max-width: 1500px)
     padding: 0
-    padding-top: 120px
+    padding-top: 18vh
   @media all and (max-width: 1200px)
     padding-top: 100vh
   img
-    width: 40%
     object-fit: contain
+  .ticket-img
+    width: 4rem
+  .phone-img
+    width: 12rem
   .headline
     display: flex
     justify-content: center
     align-items: center
     h2
-      padding-top: 70px
-      padding-bottom: 40px
+      padding: 4rem
       width: 100%
       @media all and (max-width: 700px)
         padding-top: 50px
@@ -29,7 +32,7 @@
         white-space: pre-wrap
   .header-content
     display: flex
-    justify-content: space-around
+    justify-content: center
     align-items: center
     width: 100%
     align-items: center
@@ -50,8 +53,7 @@
       @media all and (max-width: 1200px)
         display: none
     .description
-      width: 40%
-      padding: 20px 0px 0px 0px
+      width: 12rem
       @media all and (max-width: 1200px)
         padding: 200px
         box-sizing: border-box
@@ -61,31 +63,16 @@
         justify-content: center
         flex-direction: column
         align-items: center
-    .ticket
-      width: 100%
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-      @media all and (max-width: 1200px)
-        width: 100%
-      @media all and (max-width: 700px)
-        width: 100%
   .ticket-text
     text-align: center
-    padding: 50px 200px
+    padding: 1rem
     box-sizing: border-box
   p
     margin: 0
-    padding: 20px
-    text-align: center
-    font-size: 2em
+    text-align: left
     @media all and (max-width: 1200px)
       margin-left: 0
       display: flex
       justify-content: center
       align-items: center
       flex-direction: column
-      font-size: 2.7em
-    @media all and (max-width: 700px)
-      font-size: 1.5em
