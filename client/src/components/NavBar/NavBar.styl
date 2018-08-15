@@ -1,5 +1,5 @@
 nav-bar-height = 18vh
-nav-bar-mobile-height = 80vh
+nav-bar-mobile-height = 100vh
 nav-bar-color = white
 nav-bar-text-color = white
 global-padding = 10rem
@@ -16,7 +16,7 @@ global-padding = 10rem
     @media all and (max-width: 1200px)
       color: white
   .nav-items a:hover
-    border: 2px solid black
+    border-bottom: 2px solid black
 
 .nav-bar-wrapper
   perspective: 100vw
@@ -64,16 +64,20 @@ global-padding = 10rem
     position: absolute
     top: 0
     box-shadow: none
-  .free-pass-button
-    margin: 20px 0
-    padding: 0
-    .free-pass
-      font-size: 16pt
-      font-family: 'Roboto', sans-serif
-      padding: 15px 15px
-      @media all and (max-width: 1200px)
-        font-size: 9pt
-        padding: 18px 23px
+  a:hover
+    border-bottom: 2px solid #ff6262
+    border-bottom-style: inset
+  a
+    color: white
+    transition: 0.3s ease-in-out
+    padding: 10px 15px
+    margin: 10px
+    text-align: center
+    border-bottom: 2px solid transparent
+    border-bottom-style: inset
+    white-space: nowrap
+
+    cursor: pointer
   .nav-items
     white-space: nowrap
     display: flex
@@ -82,25 +86,13 @@ global-padding = 10rem
     @media all and (max-width: 1200px)
       display: grid
     grid-template-columns: repeat(2, 1fr)
-    a
-      transition: 0.3s ease-in-out
-      padding: 10px 15px
-      border-radius: 10px
-      margin: 10px
-      text-align: center
-      border: 2px solid transparent
-    a:hover
-      background: white
-      color: black
     @media all and (max-width: 1200px)
       white-space: pre-line
       flex-direction: column
   h1
   h2
   h3
-  a
   .account-actions
-    padding: 0px 15px
     color: nav-bar-text-color
     z-index: 1
     @media all and (max-width: 1200px)
@@ -108,15 +100,10 @@ global-padding = 10rem
       width: auto
       text-align: center
   .account-actions
-    a
     .logout-button
       font-weight: 900
       transition: ease 0.15s
       white-space: nowrap
-    .logout-button:hover
-    a:hover
-      color: #ff6262
-      cursor: pointer
   .logo
     width: 50px
     height: 50px

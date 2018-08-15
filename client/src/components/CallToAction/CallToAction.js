@@ -6,7 +6,7 @@ class CallToAction extends Component {
   render() {
     const { buttonType } = this.props;
     return (
-      <div
+      <section
         class="call-to-action"
         style={{
           backgroundImage: `url(${require("../../img/background.jpg")})`,
@@ -19,7 +19,7 @@ class CallToAction extends Component {
           openSignUpForm={this.props.openSignUpForm}
           buttonType={buttonType}
         />
-      </div>
+      </section>
     );
   }
 }

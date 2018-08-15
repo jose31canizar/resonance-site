@@ -127,8 +127,8 @@ class SignUpForm extends Component {
     return (
       <div class="sign-up-form" onClick={this.props.closeSignUpForm}>
         <div class="registration-block" onClick={this.handleClose}>
-          <h2>{title}</h2>
-          <h3>{statement}</h3>
+          <label>{title}</label>
+          <label>{statement}</label>
           <form onSubmit={this.handleSubmit} method="post">
             <input
               placeholder="first name"

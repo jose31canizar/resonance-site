@@ -5,10 +5,10 @@
 @import './Animations.styl'
 
 @font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Gotham.eot');
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 400
+  src: url('../fonts/Gotham.eot')
   src: local('Gotham'),
     url('../fonts/gotham.woff2') format('woff2'),
     url('../fonts/gotham.otf') format('otf'),
@@ -18,10 +18,10 @@
 
 
 @font-face {
-  font-family: 'Ano';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/AnoRegular-Regular.eot');
+  font-family: 'Ano'
+  font-style: normal
+  font-weight: 400
+  src: url('../fonts/AnoRegular-Regular.eot')
   src: local('Ano'),
     url('../fonts/AnoRegular-Regular.woff2') format('woff2'),
     url('../fonts/AnoRegular-Regular.otf') format('otf'),
@@ -30,10 +30,10 @@
 }
 
 @font-face {
-  font-family: 'Avenir';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Avenir.eot');
+  font-family: 'Avenir'
+  font-style: normal
+  font-weight: 400
+  src: url('../fonts/Avenir.eot')
   src: local('Avenir'),
     url('../fonts/avenir.woff2') format('woff2'),
     url('../fonts/Avenir.otf') format('otf'),
@@ -42,10 +42,10 @@
 }
 
 @font-face {
-  font-family: 'Avenir-Heavy';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/avenir-heavy.eot');
+  font-family: 'Avenir-Heavy'
+  font-style: normal
+  font-weight: 400
+  src: url('../fonts/avenir-heavy.eot')
   src: local('Avenir-Heavy'),
     url('../fonts/Avenir-Heavy.woff2') format('woff2'),
     url('../fonts/avenir-heavy.otf') format('otf'),
@@ -57,6 +57,9 @@ html
   overflow-x: hidden
   width: 100%
   position: absolute
+
+*
+  box-sizing: border-box
 
 body
   margin: 0
@@ -112,10 +115,9 @@ body
   ul
   button
   b
-  label
   time
   a
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir', sans-serif
     font-weight: 100
     margin: 0
     padding: 0
@@ -135,55 +137,44 @@ body
     line-height: 1
 
   h1
-    font-size: 2.5em
+    font-size: 1.75em
     color: #000000
     font-weight: 700
 
 
   h2
-    font-family: 'Avenir', sans-serif;
-    font-size: 1.7rem
+    font-family: 'Avenir', sans-serif
+    font-size: 1.5rem
     font-weight: 900
     color: #504550
     text-align: center
-    line-height: 1.3em
-    @media all and (max-width: 700px)
-      font-size: 2em
+    line-height: 1.3rem
 
   h3
-    font-family: 'Avenir', sans-serif;
-    font-size: 2.2em
+    font-family: 'Avenir', sans-serif
+    font-size: 1.4rem
     color: #6A5B69
     font-weight: 600
-    @media all and (max-width: 700px)
-      font-size: 1.4em
-    @media all and (max-width: 1200px)
-      font-size: 3em
 
   h4
-    font-size: 3em
+    font-size: 1.3rem
     color: #e86b37ed
     font-weight: 900
-    @media all and (max-width: 700px)
-      width: 90%
-      font-size: 1.5em
-    @media all and (max-width: 1200px)
-      font-size: 2.5em
-      padding: 20px 0
-      text-align: center
 
   p
   span
-    font-size: 1rem
-    color: #837E83
-    line-height: 1.3
-    @media all and (max-width: 1200px)
-      font-size: 2.1em
-      font-weight: 900
-      width: 100%
-      text-align: center
-    @media all and (max-width: 700px)
-      font-size: 1.4em
-
+    font-size: 0.9rem
+    color: #545156
+    line-height: 1.3rem
+    font-weight: 900
+  label
+    font-family: 'Avenir', sans-serif
+    letter-spacing: 0.1rem
+    font-weight: 900
   img
     width: 100%
+
+  section
+    padding: 0 25rem
+    @media all and (max-width: 1200px)
+      padding: 1rem

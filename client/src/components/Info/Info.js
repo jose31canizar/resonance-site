@@ -5,10 +5,10 @@ import "./Info.styl";
 
 class Info extends Component {
   render() {
-    const firstRowOfTopics = this.props.data.topics.slice(0, 2);
-    const secondRowOfTopics = this.props.data.topics.slice(2, 6);
+    const firstRow = this.props.data.features.slice(0, 2);
+    const secondRow = this.props.data.features.slice(2, 6);
     return (
-      <div class="info">
+      <section class="info">
         <ScrollReveal id="info-header">
           <h2>{this.props.data.title}</h2>
           <h4 class="subtitle">{this.props.data.description.title}</h4>
@@ -21,8 +21,8 @@ class Info extends Component {
         <h3>{this.props.data.description.subtitle}</h3>
         <ScrollReveal id="reveal-first-row">
           <div class="block-row">
-            {firstRowOfTopics.map((item, i) => (
-              <div class="topic" key={i}>
+            {firstRow.map((item, i) => (
+              <div class="feature-item" key={i}>
                 <div class="img-feature">
                   <img
                     src={require(`../../img/${item.image}.png`)}
@@ -43,8 +43,8 @@ class Info extends Component {
         </ScrollReveal>
         <ScrollReveal id="reveal-second-row">
           <div class="block-row">
-            {secondRowOfTopics.map((item, i) => (
-              <div class="topic" key={i}>
+            {secondRow.map((item, i) => (
+              <div class="feature-item" key={i}>
                 <div class="img-feature">
                   <img
                     src={require(`../../img/${item.image}.png`)}
@@ -67,7 +67,7 @@ class Info extends Component {
           <h2 class="epilogue">{this.props.data.epilogue}</h2>
           <FreePassButton openSignUpForm={this.props.openSignUpForm} white />
         </ScrollReveal>
-      </div>
+      </section>
     );
   }
 }

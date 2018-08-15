@@ -46,7 +46,7 @@ export default class Featured extends Component {
   render() {
     const { hover_states } = this.state;
     return (
-      <div class="featured">
+      <section class="featured">
         {FeaturedData.map((feature, i) => (
           <div class="feature">
             {feature.links.map((link, j) => (
@@ -74,7 +74,7 @@ export default class Featured extends Component {
             </div>
           </div>
         ))}
-      </div>
+      </section>
     );
   }
 }

@@ -1,42 +1,40 @@
 [
   {
-    "title":"Hello, Resonators.",
+    "title": "Hello, Resonators.",
     "description": {
-        "reasons": [
-            "Here's what we think the future of music sharing looks like."
-        ],
-        "subtitle":"Features"
-      },
-    "topics": [
+      "reasons": [
+        "Here's what we think the future of music sharing looks like."
+      ],
+      "subtitle": "Features"
+    },
+    "features": [
       {
-        "image":"music-player",
-        "title":"Song of The Week",
+        "image": "music-player",
+        "title": "Song of The Week",
         "facts": [
           "• Post your 'song of the week', the song you're vibing with the most and want to represent your profile for the week."
         ]
       },
       {
-        "image":"levels_logo",
-        "title":"Gamification",
+        "image": "levels_logo",
+        "title": "Gamification",
         "facts": [
           "• Rank up on the gamified platform by showing others your know your music."
         ]
       },
       {
-        "image":"headphones_logo",
-        "title":"Customize",
+        "image": "headphones_logo",
+        "title": "Customize",
         "facts": [
           "• Create a personalized profile that reflects your quality taste in music."
         ]
       },
       {
-        "image":"chat",
-        "title":"Connect",
-        "facts": [
-          "• Follow others to find them on your feed."
-        ]
+        "image": "chat",
+        "title": "Connect",
+        "facts": ["• Follow others to find them on your feed."]
       }
     ],
-    "epilogue":"Plus more upcoming epic features."
+    "epilogue": "Plus more upcoming epic features."
   }
 ]

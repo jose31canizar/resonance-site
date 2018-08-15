@@ -36,9 +36,9 @@ class Parallax extends Component {
     }
     return (
       <div class={"parallax " + this.props.class} style={styles}>
-        <video autoPlay loop muted>
+        {/* <video autoPlay loop muted>
           <source src={require("../../img/concert.MOV")} type="video/mp4" />
-        </video>
+        </video> */}
       </div>
     );
   }

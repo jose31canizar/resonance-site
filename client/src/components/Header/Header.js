@@ -9,7 +9,7 @@ class Header extends Component {
     const { buttonType } = this.props;
     const { description, offer, statement } = this.props.data;
     return (
-      <div class="header">
+      <section class="header">
         <div class="headline">
           <h2>{this.props.data.headline}</h2>
         </div>
@@ -44,7 +44,7 @@ class Header extends Component {
             white
           />
         </ScrollReveal>
-      </div>
+      </section>
     );
   }
 }
