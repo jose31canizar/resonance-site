@@ -1,113 +1,46 @@
 {
-  "name": "resonance",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "http://18.221.157.99/",
-  "proxy": "http://localhost:3001",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "autoprefixer": "7.1.2",
-    "babel-core": "6.25.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-react-app": "^3.0.2",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-runtime": "6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.1",
-    "chalk": "1.1.3",
-    "class-to-classname": "^1.0.1",
-    "dotenv": "4.0.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "4.4.1",
-    "eslint-config-react-app": "^2.0.0",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "2.35.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "7.1.0",
-    "extract-text-webpack-plugin": "3.0.0",
-    "file-loader": "0.11.2",
-    "fs-extra": "3.0.1",
-    "html-webpack-plugin": "2.29.0",
-    "jest": "20.0.4",
-    "lodash": "^4.17.4",
-    "markdown-component-loader": "^1.1.0",
-    "object-assign": "4.1.1",
-    "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-loader": "2.0.6",
-    "promise": "8.0.1",
-    "raf": "^3.4.0",
-    "react": "^16.2.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-dev-utils": "^4.0.1",
-    "react-dom": "^16.4.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-mock-store": "^1.5.1",
-    "redux-persist": "^5.5.0",
-    "sw-precache-webpack-plugin": "0.11.4",
-    "url-loader": "0.5.9",
-    "webpack": "3.5.1",
-    "webpack-dev-server": "2.7.1",
-    "webpack-manifest-plugin": "1.2.1",
-    "whatwg-fetch": "2.0.3"
+    "babel-plugin-inline-react-svg": "^0.5.4",
+    "gatsby": "2.0.0-beta.29",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-catch-links": "^1.0.24",
+    "gatsby-plugin-layout": "^1.0.0-beta.1",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-svg": "^1.1.1",
+    "gatsby-plugin-stylus": "^1.1.21",
+    "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-react-router-scroll": "^1.0.18",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-emotion": "^9.2.6",
+    "react-helmet": "^5.2.0",
+    "react-media": "^1.8.0",
+    "svg-react-loader": "^0.4.5",
+    "typography-theme-bootstrap": "^0.16.7",
+    "typography-theme-lawton": "^0.15.10",
+    "typography-theme-wordpress-2011": "^0.15.10"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "css-loader": "^0.28.4",
-    "history": "^4.7.2",
-    "html-loader": "^0.5.1",
-    "markdown-loader": "^2.0.2",
-    "react-router-dom": "^4.2.2",
-    "style-loader": "^0.18.2",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "prettier": "^1.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }
