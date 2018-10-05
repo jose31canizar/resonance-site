@@ -1,106 +1,234 @@
-<p align="center">
-  <a href="https://next.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://next.gatsbyjs.org/docs/gatsby-starters/)._
+## Table of Contents
 
-## 🚀 Quick start
+- [Questions? Feedback?](#questions-feedback)
+- [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+  - [npm run dev](#npm-run-dev)
+  - [npm run build](#npm-run-build)
+  - [npm run start](#npm-run-start)
+- [Using CSS](#using-css)
+- [Adding Components](#adding-components)
+- [Fetching Data](#fetching-data)
+- [Custom Server](#custom-server)
+- [Syntax Highlighting](#syntax-highlighting)
+- [Using the `static` Folder](#using-the-static-folder)
+- [Deploy to Now](#deploy-to-now)
+- [Something Missing?](#something-missing)
 
-1.  **Install the Gatsby CLI.**
+## Questions? Feedback?
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
+Check out [Next.js FAQ & docs](https://github.com/zeit/next.js#faq) or [let us know](https://github.com/segmentio/create-next-app/issues) your feedback.
 
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
+## Folder Structure
+
+After creating an app, it should look something like:
+
+```
+.
+├── README.md
+├── components
+│   ├── head.js
+│   └── nav.js
+├── next.config.js
+├── node_modules
+│   ├── [...]
+├── package.json
+├── pages
+│   └── index.js
+├── static
+│   └── favicon.ico
+└── yarn.lock
+```
+
+Routing in Next.js is based on the file system, so `./pages/index.js` maps to the `/` route and
+`./pages/about.js` would map to `/about`.
+
+The `./static` directory maps to `/static` in the `next` server, so you can put all your
+other static resources like images or compiled CSS in there.
+
+Out of the box, we get:
+
+- Automatic transpilation and bundling (with webpack and babel)
+- Hot code reloading
+- Server rendering and indexing of `./pages`
+- Static file serving. `./static/` is mapped to `/static/`
+
+Read more about [Next's Routing](https://github.com/zeit/next.js#routing)
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `.next` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run start`
+
+Starts the application in production mode.
+The application should be compiled with \`next build\` first.
+
+See the section in Next docs about [deployment](https://github.com/zeit/next.js/wiki/Deployment) for more information.
+
+## Using CSS
+
+[`styled-jsx`](https://github.com/zeit/styled-jsx) is bundled with next to provide support for isolated scoped CSS. The aim is to support "shadow CSS" resembling of Web Components, which unfortunately [do not support server-rendering and are JS-only](https://github.com/w3c/webcomponents/issues/71).
+
+```jsx
+export default () => (
+  <div>
+    Hello world
+    <p>scoped!</p>
+    <style jsx>{`
+      p {
+        color: blue;
+      }
+      div {
+        background: red;
+      }
+      @media (max-width: 600px) {
+        div {
+          background: blue;
+        }
+      }
+    `}</style>
+  </div>
+)
+```
+
+Read more about [Next's CSS features](https://github.com/zeit/next.js#css).
+
+## Adding Components
+
+We recommend keeping React components in `./components` and they should look like:
+
+### `./components/simple.js`
+
+```jsx
+const Simple = () => <div>Simple Component</div>
+
+export default Simple // don't forget to export default!
+```
+
+### `./components/complex.js`
+
+```jsx
+import { Component } from 'react'
+
+class Complex extends Component {
+  state = {
+    text: 'World'
+  }
+
+  render() {
+    const { text } = this.state
+    return <div>Hello {text}</div>
+  }
+}
+
+export default Complex // don't forget to export default!
+```
+
+## Fetching Data
+
+You can fetch data in `pages` components using `getInitialProps` like this:
+
+### `./pages/stars.js`
+
+```jsx
+const Page = props => <div>Next stars: {props.stars}</div>
+
+Page.getInitialProps = async ({ req }) => {
+  const res = await fetch('https://api.github.com/repos/zeit/next.js')
+  const json = await res.json()
+  const stars = json.stargazers_count
+  return { stars }
+}
+
+export default Page
+```
+
+For the initial page load, `getInitialProps` will execute on the server only. `getInitialProps` will only be executed on the client when navigating to a different route via the `Link` component or using the routing APIs.
+
+_Note: `getInitialProps` can **not** be used in children components. Only in `pages`._
+
+Read more about [fetching data and the component lifecycle](https://github.com/zeit/next.js#fetching-data-and-component-lifecycle)
+
+## Custom Server
+
+Want to start a new app with a custom server? Run `create-next-app --example customer-server custom-app`
+
+Typically you start your next server with `next start`. It's possible, however, to start a server 100% programmatically in order to customize routes, use route patterns, etc
+
+This example makes `/a` resolve to `./pages/b`, and `/b` resolve to `./pages/a`:
+
+```jsx
+const { createServer } = require('http')
+const { parse } = require('url')
+const next = require('next')
+
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
+const handle = app.getRequestHandler()
+
+app.prepare().then(() => {
+  createServer((req, res) => {
+    // Be sure to pass `true` as the second argument to `url.parse`.
+    // This tells it to parse the query portion of the URL.
+    const parsedUrl = parse(req.url, true)
+    const { pathname, query } = parsedUrl
+
+    if (pathname === '/a') {
+      app.render(req, res, '/b', query)
+    } else if (pathname === '/b') {
+      app.render(req, res, '/a', query)
+    } else {
+      handle(req, res, parsedUrl)
+    }
+  }).listen(3000, err => {
+    if (err) throw err
+    console.log('> Ready on http://localhost:3000')
+  })
+})
+```
+
+Then, change your `start` script to `NODE_ENV=production node server.js`.
+
+Read more about [custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing)
+
+## Syntax Highlighting
+
+To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
+
+## Deploy to Now
+
+[now](https://zeit.co/now) offers a zero-configuration single-command deployment.
+
+1.  Install the `now` command-line tool either via the recommended [desktop tool](https://zeit.co/download) or via node with `npm install -g now`.
+
+2.  Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
+
+    ```
+    > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
     ```
 
-2.  **Create a Gatsby site.**
+    Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+You can find more details about [`now` here](https://zeit.co/now).
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter
-    ```
+## Something Missing?
 
-3.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-4.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
-
-  1.  **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://next.gatsbyjs.org/). Here are some places to start:
-
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://next.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
--   **To dive straight into code samples head [to our documentation](https://next.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+If you have ideas for how we could improve this readme or the project in general, [let us know](https://github.com/segmentio/create-next-app/issues) or [contribute some!](https://github.com/segmentio/create-next-app/edit/master/lib/templates/default/README.md)

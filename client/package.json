@@ -1,46 +1,15 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "babel-plugin-inline-react-svg": "^0.5.4",
-    "gatsby": "2.0.0-beta.29",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-catch-links": "^1.0.24",
-    "gatsby-plugin-layout": "^1.0.0-beta.1",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-svg": "^1.1.1",
-    "gatsby-plugin-stylus": "^1.1.21",
-    "gatsby-plugin-typography": "^1.7.19",
-    "gatsby-react-router-scroll": "^1.0.18",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "@zeit/next-stylus": "^1.0.1",
+    "next": "^6.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-emotion": "^9.2.6",
-    "react-helmet": "^5.2.0",
-    "react-media": "^1.8.0",
-    "svg-react-loader": "^0.4.5",
-    "typography-theme-bootstrap": "^0.16.7",
-    "typography-theme-lawton": "^0.15.10",
-    "typography-theme-wordpress-2011": "^0.15.10"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.13.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "webpack": "4.3.0"
   }
 }
