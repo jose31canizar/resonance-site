@@ -5,6 +5,8 @@ export default class Expression extends Component {
   render() {
     return (
       <div className="section">
+        <h2>Self Expression</h2>
+        <p>Music is all about personality.</p>
         <div className="row">
           <Link href="https://github.com/zeit/next.js#getting-started">
             <a className="card">

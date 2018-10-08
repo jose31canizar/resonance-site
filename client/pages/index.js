@@ -8,9 +8,6 @@ const Home = () => (
   <Layout>
     <div className="home">
       <h1 className="title">Curated music right at your fingertips.</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
 
       <img className="banner-image" src="/static/resonance-phone-outline.svg" />
       <svg

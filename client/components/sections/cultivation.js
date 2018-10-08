@@ -4,6 +4,7 @@ export default class Cultivation extends Component {
   render() {
     return (
       <div className="section">
+        <h2>Cultivation</h2>
         <p>
           I'ts not just about sifting, filtering, editing. Quality music comes
           from its relation to other works, the history behind it and the works

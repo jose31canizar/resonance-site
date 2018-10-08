@@ -1,9 +1,34 @@
+
+@font-face
+  font-family Futura
+  src url('/static/futura_book_bt.ttf') format('ttf')
+
+h1
+h2
+h3
+p
+li
+  font-family Futura
+  font-weight 100
+  color #20202d
+
+.title
+  padding 10rem 0
+
+  @media all and (max-width: 64rem)
+    padding 8rem 2rem
+
 .arrow
   fill white
   stroke black
 
 .banner-image
-  width 33%
+  max-width 14rem
+  padding 0 0 5rem
+  margin 2rem
+
+.section
+  padding 15rem
 
   @media all and (max-width: 64rem)
-    width 70%
+    padding 2rem

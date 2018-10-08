@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "class-to-classname": "^1.0.1"
+    "class-to-classname": "^1.0.1",
+    "express": "^4.16.3"
   }
 }
