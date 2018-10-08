@@ -4,6 +4,10 @@ export default class Cultivation extends Component {
   render() {
     return (
       <div className="section">
+        <img
+          className="banner-image"
+          src="/static/resonance-phone-outline.svg"
+        />
         <h2>Cultivation</h2>
         <p>
           I'ts not just about sifting, filtering, editing. Quality music comes

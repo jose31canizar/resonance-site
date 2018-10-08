@@ -2,12 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../components/layout";
 import * as Sections from "../components/sections";
+import Banner from "../components/banner";
 import "./index.styl";
 
 const Home = () => (
   <Layout>
     <div className="home">
-      <h1 className="title">Curated music right at your fingertips.</h1>
+      <Banner />
 
       <img className="banner-image" src="/static/resonance-phone-outline.svg" />
       <svg

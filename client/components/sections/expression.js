@@ -5,18 +5,22 @@ export default class Expression extends Component {
   render() {
     return (
       <div className="section">
+        <img
+          className="banner-image"
+          src="/static/resonance-phone-outline.svg"
+        />
         <h2>Self Expression</h2>
         <p>Music is all about personality.</p>
         <div className="row">
           <Link href="https://github.com/zeit/next.js#getting-started">
             <a className="card">
-              <h3>Getting Started &rarr;</h3>
+              <h3>@josecani &rarr;</h3>
               <p>Learn more about Next on Github and in their examples</p>
             </a>
           </Link>
           <Link href="https://open.segment.com/create-next-app">
             <a className="card">
-              <h3>Examples &rarr;</h3>
+              <h3>@mary &rarr;</h3>
               <p>
                 Find other example boilerplates on the{" "}
                 <code>create-next-app</code> site
@@ -25,7 +29,7 @@ export default class Expression extends Component {
           </Link>
           <Link href="https://github.com/segmentio/create-next-app">
             <a className="card">
-              <h3>Create Next App &rarr;</h3>
+              <h3>@tyler &rarr;</h3>
               <p>Was this tool helpful? Let us know how we can improve it</p>
             </a>
           </Link>

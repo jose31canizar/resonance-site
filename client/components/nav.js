@@ -58,6 +58,7 @@ const Nav = () => (
       ul {
         display: flex;
         justify-content: space-between;
+        flex-shrink: 0;
       }
       nav > ul {
         padding: 4px 16px;
