@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class FlowStream extends Component {
   render() {
     return (
-      <div className="section">
+      <div className={`section ${this.props.className}`}>
         <img
           className="banner-image"
           src="/static/resonance-phone-outline.svg"

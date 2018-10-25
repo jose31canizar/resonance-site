@@ -7,7 +7,7 @@ const links = [
     label: "Subscribe"
   },
   {
-    href: "/log-in",
+    href: "/auth/log-in",
     label: "Log In"
   },
   {

@@ -1,0 +1,21 @@
+.title-text
+  fill none !important
+  stroke white
+  stroke-width 1.8px
+  stroke-dashoffset -900
+  stroke-dasharray 900
+  stroke-linecap butt
+  stroke-linejoin round
+  animation dash 1.5s ease-in-out forwards
+
+  @keyframes dash
+    100%
+      stroke-dashoffset 0
+
+.banner-title
+  background linear-gradient(135deg, #1f1b1f, #321f42)
+  max-width 800px
+  box-shadow 0 30px 50px -20px rgb(46, 6, 66)
+
+.banner-title.mobile
+  max-width 350px

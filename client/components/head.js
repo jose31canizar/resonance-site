@@ -37,6 +37,10 @@ const Head = props => (
           font-family: "Futura-Book";
           src: url("/static/fonts/futura_book_bt.ttf");
         }
+        @font-face {
+          font-family: "Galano";
+          src: url("/static/fonts/Galano\ Grotesque.otf");
+        }
       `}
     </style>
   </NextHead>

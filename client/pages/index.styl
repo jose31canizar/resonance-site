@@ -3,12 +3,16 @@
   font-family Futura
   src url('/static/futura_book_bt.ttf') format('ttf')
 
+@font-face
+  font-family 'Galano'
+  src url('/static/Galano\ Grotesque.otf') format('otf')
+
 h1
 h2
 h3
 p
 li
-  font-family Futura
+  font-family Galano
   font-weight 100
   color #20202d
 
@@ -24,14 +28,10 @@ li
 
 .banner-image
   max-width 14rem
-  padding 0 0 5rem
-  margin 2rem
-
-.section
-  padding 15rem
-
-  @media all and (max-width: 64rem)
-    padding 2rem
+  padding 1rem 4rem 3rem
+  margin 0rem 0rem 3rem
+  margin-top 9rem
+  animation floating 1.5s ease-in infinite
 
 .banner-title
   width 100%
@@ -40,3 +40,16 @@ li
 
   text
     fill url('#banner-pattern')
+
+@keyframes floating
+  0%
+    box-shadow 0 5px 15px 0px rgba(0, 0, 0, 0.6)
+    transform translate3d(0, 0, 0)
+
+  50%
+    box-shadow 0 25px 15px 0px rgba(0, 0, 0, 0.2)
+    transform translate3d(0, 20px, 0)
+
+  100%
+    box-shadow 0 5px 15px 0px rgba(0, 0, 0, 0.6)
+    transform translate3d(0, 0, 0)

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Description extends Component {
   render() {
     return (
-      <div className="section">
+      <div className={`section ${this.props.className}`}>
         <h2>
           Music discovery from lists curated by Tastemakers with Personality
         </h2>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default class Expression extends Component {
   render() {
     return (
-      <div className="section">
+      <div className={`section ${this.props.className}`}>
         <img
           className="banner-image"
           src="/static/resonance-phone-outline.svg"
