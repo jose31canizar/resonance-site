@@ -4,7 +4,7 @@ Great new music right at your fingertips.
 
 ![Alt text](client/src/img/icon.png?raw=true "Resonance")
 
-##About
+## About
 
 Resonance is a platform for sharing, curating, and cultivating quality music.
 
